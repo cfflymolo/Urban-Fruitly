@@ -83,9 +83,9 @@
 		2F5D3A9F175AA3EA00005E82 /* UrbanFruitly */ = {
 			isa = PBXGroup;
 			children = (
+				2F5D3ABC175AA41B00005E82 /* Views */,
 				2F5D3AA8175AA3EA00005E82 /* UFAppDelegate.h */,
 				2F5D3AA9175AA3EA00005E82 /* UFAppDelegate.m */,
-				2F5D3AB1175AA3EA00005E82 /* MainStoryboard.storyboard */,
 				2F5D3AB4175AA3EA00005E82 /* UFViewController.h */,
 				2F5D3AB5175AA3EA00005E82 /* UFViewController.m */,
 				2F5D3AA0175AA3EA00005E82 /* Supporting Files */,
@@ -105,6 +105,14 @@
 				2F5D3AAF175AA3EA00005E82 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F5D3ABC175AA41B00005E82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F5D3AB1175AA3EA00005E82 /* MainStoryboard.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
