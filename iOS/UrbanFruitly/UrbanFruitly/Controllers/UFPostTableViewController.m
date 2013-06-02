@@ -39,8 +39,11 @@
     
     self.typePickerView.dataSource = self.expirationPickerView.dataSource = self;
     self.typePickerView.delegate = self.expirationPickerView.delegate = self;
-    [self.view addSubview:self.typePickerView];
-    [self.view addSubview:self.expirationPickerView];
+    
+    
+    UIView* topView = [[[[UIApplication sharedApplication] keyWindow] subviews] lastObject];
+    [topView addSubview:self.typePickerView];
+    [topView addSubview:self.expirationPickerView];
     
     self.productTypes = @[@"Apple", @"Oranges", @"Avacado"];
     self.expirationDurations = @[@"1 Week", @"2 Weeks", @"3 Weeks"];
@@ -52,7 +55,7 @@
     if (indexPath.section == 1 && indexPath.row == 0) {
         [UIView animateWithDuration:0.5 animations:^{
             CGRect frame = self.typePickerView.frame;
-            self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-280, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
+            self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
         }];
     }
 }
@@ -64,21 +67,30 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return self.productTypes.count;
+    if(pickerView == self.typePickerView)
+        return self.productTypes.count;
+    return self.expirationDurations.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return self.productTypes [row];
+    if(pickerView == self.typePickerView)
+        return self.productTypes [row];
+    
+    return self.expirationDurations [row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     [UIView animateWithDuration:0.5f animations:^{
-        self.typePickerView.frame = originalPickerFrame;
+        pickerView.frame = originalPickerFrame;
     }];
     
-    self.typeTextField.text = self.productTypes [row];
+    if(pickerView == self.typePickerView)
+        self.typeTextField.text = self.productTypes [row];
+    else{
+        self.
+    }
 }
 
 @end

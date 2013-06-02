@@ -18,6 +18,8 @@
 		04039B49175B13DE0094E4A7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B48175B13DE0094E4A7 /* CoreText.framework */; };
 		04039B4B175B13E50094E4A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B4A175B13E50094E4A7 /* OpenGLES.framework */; };
 		04039B4E175B15A10094E4A7 /* UFProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04039B4D175B15A10094E4A7 /* UFProductListViewController.m */; };
+		042B19E8175BC2D200F87B46 /* apple_002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 042B19E7175BC2D200F87B46 /* apple_002.jpg */; };
+		042B19EB175BC40C00F87B46 /* UFProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B19EA175BC40B00F87B46 /* UFProductDetailViewController.m */; };
 		2F372668175B03A3007B3B23 /* UFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F372667175B03A3007B3B23 /* UFUser.m */; };
 		2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266A175B03B0007B3B23 /* UFProduct.m */; };
 		2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266D175B03B8007B3B23 /* UFTransaction.m */; };
@@ -59,6 +61,9 @@
 		04039B4A175B13E50094E4A7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		04039B4C175B15A10094E4A7 /* UFProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductListViewController.h; sourceTree = "<group>"; };
 		04039B4D175B15A10094E4A7 /* UFProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductListViewController.m; sourceTree = "<group>"; };
+		042B19E7175BC2D200F87B46 /* apple_002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple_002.jpg; sourceTree = "<group>"; };
+		042B19E9175BC40B00F87B46 /* UFProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductDetailViewController.h; sourceTree = "<group>"; };
+		042B19EA175BC40B00F87B46 /* UFProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductDetailViewController.m; sourceTree = "<group>"; };
 		2F372666175B03A3007B3B23 /* UFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFUser.h; path = Models/UFUser.h; sourceTree = "<group>"; };
 		2F372667175B03A3007B3B23 /* UFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFUser.m; path = Models/UFUser.m; sourceTree = "<group>"; };
 		2F372669175B03B0007B3B23 /* UFProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFProduct.h; path = Models/UFProduct.h; sourceTree = "<group>"; };
@@ -146,6 +151,7 @@
 		2F5D3A8D175AA3EA00005E82 = {
 			isa = PBXGroup;
 			children = (
+				042B19E7175BC2D200F87B46 /* apple_002.jpg */,
 				2F5D3A9F175AA3EA00005E82 /* UrbanFruitly */,
 				2F5D3A98175AA3EA00005E82 /* Frameworks */,
 				2F5D3ABD175AB28500005E82 /* Third Party Frameworks */,
@@ -244,6 +250,8 @@
 				2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */,
 				04039B4C175B15A10094E4A7 /* UFProductListViewController.h */,
 				04039B4D175B15A10094E4A7 /* UFProductListViewController.m */,
+				042B19E9175BC40B00F87B46 /* UFProductDetailViewController.h */,
+				042B19EA175BC40B00F87B46 /* UFProductDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 				2F5D3AB0175AA3EA00005E82 /* Default-568h@2x.png in Resources */,
 				2F5D3AB3175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard in Resources */,
 				04039B3B175B13A40094E4A7 /* ArcGIS.bundle in Resources */,
+				042B19E8175BC2D200F87B46 /* apple_002.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +333,7 @@
 				2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */,
 				2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */,
 				04039B4E175B15A10094E4A7 /* UFProductListViewController.m in Sources */,
+				042B19EB175BC40C00F87B46 /* UFProductDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
