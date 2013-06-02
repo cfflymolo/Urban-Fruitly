@@ -634,10 +634,10 @@
             </objects>
             <point key="canvasLocation" x="-1388" y="708"/>
         </scene>
-        <!--View Controller-->
+        <!--Product List View Controller-->
         <scene sceneID="vs5-xl-ZyV">
             <objects>
-                <viewController id="luW-z3-cXG" sceneMemberID="viewController">
+                <viewController id="luW-z3-cXG" customClass="UFProductListViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Vn2-yc-ug0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -650,6 +650,29 @@
             <point key="canvasLocation" x="304" y="-673"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UFMainViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMainViewController.h"/>
+        </class>
+        <class className="UFPostTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="typeTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="UFProductListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductListViewController.h"/>
+        </class>
+        <class className="UFSearchTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

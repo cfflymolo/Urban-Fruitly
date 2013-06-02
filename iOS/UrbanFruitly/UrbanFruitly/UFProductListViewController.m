@@ -9,7 +9,7 @@
 #import "UFProductListViewController.h"
 
 @interface UFProductListViewController ()
-
+@property (strong,nonatomic) AGSMapView* mapView;
 @end
 
 @implementation UFProductListViewController
@@ -27,6 +27,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _mapView = [[AGSMapView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:_mapView];
+    
+    AGSTiledMapServiceLayer *tiledLayer =
+    [AGSTiledMapServiceLayer
+     tiledMapServiceLayerWithURL:[NSURL URLWithString:@"http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"]];
+    [self.mapView addMapLayer:tiledLayer withName:@"Tiled Layer"];
 }
 
 - (void)didReceiveMemoryWarning
