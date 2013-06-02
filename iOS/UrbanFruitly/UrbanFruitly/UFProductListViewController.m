@@ -28,6 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     _mapView = [[AGSMapView alloc] initWithFrame:self.view.bounds];
+    _mapView.layerDelegate = self;
     [self.view addSubview:_mapView];
     
     AGSTiledMapServiceLayer *tiledLayer =
@@ -36,10 +37,15 @@
     [self.mapView addMapLayer:tiledLayer withName:@"Tiled Layer"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//delegate methods
+
+- (void)mapViewDidLoad:(AGSMapView *) mapView {
+    //do something now that the map is loaded
+    //for example, show the current location on the map
+    [self.mapView.locationDisplay startDataSource];
+    //zoom to an area
+    AGSEnvelope *envelope = [AGSEnvelope envelopeWithXmin:-124.83145667 ymin:30.49849464 xmax:-113.91375495  ymax:44.69150688  spatialReference:mapView.spatialReference];
+    [self.mapView zoomToEnvelope:envelope animated:NO];
 }
 
 @end

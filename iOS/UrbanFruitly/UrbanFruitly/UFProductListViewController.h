@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <ArcGIS/ArcGIS.h>
 
-@interface UFProductListViewController : UIViewController
+@interface UFProductListViewController : UIViewController <AGSMapViewLayerDelegate>
 
 @end
