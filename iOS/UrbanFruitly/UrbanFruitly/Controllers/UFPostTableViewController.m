@@ -7,12 +7,16 @@
 //
 
 #import "UFPostTableViewController.h"
+#import "UKImage.h"
+#import "MBProgressHUD.h"
+#import <Parse/Parse.h>
 
 #define TYPE_PICKERVIEW_HEIGHT 180
 
 @interface UFPostTableViewController () <UIPickerViewDataSource,UIPickerViewDelegate>
 {
     CGRect originalPickerFrame;
+    MBProgressHUD* progressHud;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 @property (weak, nonatomic) IBOutlet UITextField *typeTextField;
@@ -84,6 +88,7 @@
             self.expirationPickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
         }];
     }
+
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -163,5 +168,101 @@
     [self presentModalViewController:imagePicker animated:YES];
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissModalViewControllerAnimated:YES];
+}
 
+- (void) imagePickerController:(UIImagePickerController*) picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    [picker dismissModalViewControllerAnimated:YES];
+    
+    UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    if(image==nil)
+        return;
+    
+    CGSize smallSize = CGSizeMake(image.size.width/4.0, image.size.height/4.0);
+    UIImage* smallImage = [image scaleImageToSize:smallSize];
+    //set image
+    self.productImageView.image = smallImage;
+}
+
+///Cloud
+
+- (void) saveProfileToTheCloud{
+    
+    //set Image
+    NSData *imageData = UIImageJPEGRepresentation(self.productImageView.image, 0.05f);
+    PFFile *imageFile = [PFFile fileWithName:@"ProductImage.jpg" data:imageData];
+    
+    progressHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //Save Image object
+    // Save PFFile
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+
+            [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+                if (!error) {
+                    [self saveProfileToTheCloudAfterImageFileUpload:imageFile withLocation:geoPoint];
+                }
+            }];
+        }
+        else{
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    } progressBlock:^(int percentDone) {
+        // Update your progress spinner here. percentDone will be between 0 and 100.
+        progressHud.progress = (float)percentDone/100;
+    }];
+}
+
+- (void) saveProfileToTheCloudAfterImageFileUpload:(PFFile*)imageFile withLocation:(PFGeoPoint*)geoPoint{
+    PFUser* currentUser = [PFUser currentUser];
+    if(!currentUser)
+        return;
+    
+    PFObject* prodObj = [PFObject objectWithClassName:@"Product"];
+
+    
+    [prodObj setObject:imageFile forKey:@"image"];
+    
+    // Set the access control list to current user for security purposes
+    //prodObj.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    //[prodObj.ACL setPublicReadAccess:YES];
+    
+    //Set values in the object
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber * quantity = [f numberFromString:self.quantityTextField.text];
+    NSNumber * price = [f numberFromString:self.priceTextField.text];
+    
+    [prodObj setObject:geoPoint forKey:@"location"];
+    [prodObj setObject:quantity forKey:@"quantity"];
+    [prodObj setObject:price forKey:@"price"];
+    [prodObj setObject:self.typeTextField.text forKey:@"type"];
+    [prodObj setObject:[PFUser currentUser] forKey:@"user"];
+    
+    [prodObj saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if(succeeded){
+       //     NSLog(@"Obect ID: %@",profileObj.objectId);
+            //  [UserDataModel setProfileObjectId:profileObj.objectId];
+        }
+        else{
+            //handle error
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle: @"Problem Occured"
+                                      message: @"Could not save the profile info. Please try later."
+                                      delegate: nil
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+    }];
+}
+
+
+
+- (IBAction)postData:(id)sender {
+    [self saveProfileToTheCloud];
+}
 @end

@@ -185,7 +185,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="1At-Fm-5Pn" kind="push" id="1Pn-Gl-e34"/>
+                                                        <action selector="postData:" destination="4xI-PG-0mi" eventType="touchUpInside" id="Jxe-aI-xdA"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -528,7 +528,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="1Pn-Gl-e34"/>
-    </inferredMetricsTieBreakers>
 </document>

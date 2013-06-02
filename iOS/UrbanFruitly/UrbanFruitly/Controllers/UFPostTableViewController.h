@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UFPostTableViewController : UITableViewController <UITextFieldDelegate,UIActionSheetDelegate>
+- (IBAction)postData:(id)sender;
 
 @end
