@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04039B39175B13920094E4A7 /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B38175B13920094E4A7 /* ArcGIS.framework */; };
+		04039B3B175B13A40094E4A7 /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04039B3A175B13A40094E4A7 /* ArcGIS.bundle */; };
+		04039B3D175B13AE0094E4A7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B3C175B13AE0094E4A7 /* FacebookSDK.framework */; };
+		04039B3F175B13BA0094E4A7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B3E175B13BA0094E4A7 /* Accounts.framework */; };
+		04039B41175B13BF0094E4A7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B40175B13BF0094E4A7 /* Social.framework */; };
+		04039B43175B13C40094E4A7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B42175B13C40094E4A7 /* AdSupport.framework */; };
+		04039B45175B13CA0094E4A7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B44175B13CA0094E4A7 /* MediaPlayer.framework */; };
+		04039B47175B13D10094E4A7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B46175B13D10094E4A7 /* libc++.dylib */; };
+		04039B49175B13DE0094E4A7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B48175B13DE0094E4A7 /* CoreText.framework */; };
+		04039B4B175B13E50094E4A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B4A175B13E50094E4A7 /* OpenGLES.framework */; };
+		04039B4E175B15A10094E4A7 /* UFProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04039B4D175B15A10094E4A7 /* UFProductListViewController.m */; };
 		2F372668175B03A3007B3B23 /* UFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F372667175B03A3007B3B23 /* UFUser.m */; };
 		2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266A175B03B0007B3B23 /* UFProduct.m */; };
 		2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266D175B03B8007B3B23 /* UFTransaction.m */; };
@@ -36,6 +47,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04039B38175B13920094E4A7 /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ArcGIS.framework; sourceTree = "<group>"; };
+		04039B3A175B13A40094E4A7 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<group>"; };
+		04039B3C175B13AE0094E4A7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		04039B3E175B13BA0094E4A7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		04039B40175B13BF0094E4A7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		04039B42175B13C40094E4A7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		04039B44175B13CA0094E4A7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		04039B46175B13D10094E4A7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		04039B48175B13DE0094E4A7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		04039B4A175B13E50094E4A7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		04039B4C175B15A10094E4A7 /* UFProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductListViewController.h; sourceTree = "<group>"; };
+		04039B4D175B15A10094E4A7 /* UFProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductListViewController.m; sourceTree = "<group>"; };
 		2F372666175B03A3007B3B23 /* UFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFUser.h; path = Models/UFUser.h; sourceTree = "<group>"; };
 		2F372667175B03A3007B3B23 /* UFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFUser.m; path = Models/UFUser.m; sourceTree = "<group>"; };
 		2F372669175B03B0007B3B23 /* UFProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFProduct.h; path = Models/UFProduct.h; sourceTree = "<group>"; };
@@ -79,11 +102,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5D3ACE175AB7C800005E82 /* MobileCoreServices.framework in Frameworks */,
+				04039B4B175B13E50094E4A7 /* OpenGLES.framework in Frameworks */,
+				04039B49175B13DE0094E4A7 /* CoreText.framework in Frameworks */,
+				04039B47175B13D10094E4A7 /* libc++.dylib in Frameworks */,
+				04039B45175B13CA0094E4A7 /* MediaPlayer.framework in Frameworks */,
+				04039B43175B13C40094E4A7 /* AdSupport.framework in Frameworks */,
+				04039B41175B13BF0094E4A7 /* Social.framework in Frameworks */,
+				04039B3F175B13BA0094E4A7 /* Accounts.framework in Frameworks */,
 				2F5D3AD6175AB7EA00005E82 /* SystemConfiguration.framework in Frameworks */,
 				2F5D3AD4175AB7DD00005E82 /* StoreKit.framework in Frameworks */,
 				2F5D3AD2175AB7D400005E82 /* Security.framework in Frameworks */,
 				2F5D3AD0175AB7CE00005E82 /* QuartzCore.framework in Frameworks */,
-				2F5D3ACE175AB7C800005E82 /* MobileCoreServices.framework in Frameworks */,
 				2F5D3ACC175AB7C000005E82 /* libz.1.1.3.dylib in Frameworks */,
 				2F5D3ACA175AB7B000005E82 /* CoreLocation.framework in Frameworks */,
 				2F5D3A9E175AA3EA00005E82 /* CoreGraphics.framework in Frameworks */,
@@ -92,6 +122,8 @@
 				2F5D3A9A175AA3EA00005E82 /* UIKit.framework in Frameworks */,
 				2F5D3A9C175AA3EA00005E82 /* Foundation.framework in Frameworks */,
 				2F5D3ABF175AB2AB00005E82 /* Parse.framework in Frameworks */,
+				04039B39175B13920094E4A7 /* ArcGIS.framework in Frameworks */,
+				04039B3D175B13AE0094E4A7 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +164,16 @@
 		2F5D3A98175AA3EA00005E82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04039B4A175B13E50094E4A7 /* OpenGLES.framework */,
+				04039B48175B13DE0094E4A7 /* CoreText.framework */,
+				04039B46175B13D10094E4A7 /* libc++.dylib */,
+				04039B44175B13CA0094E4A7 /* MediaPlayer.framework */,
+				04039B42175B13C40094E4A7 /* AdSupport.framework */,
+				04039B40175B13BF0094E4A7 /* Social.framework */,
+				04039B3E175B13BA0094E4A7 /* Accounts.framework */,
+				04039B3C175B13AE0094E4A7 /* FacebookSDK.framework */,
+				04039B3A175B13A40094E4A7 /* ArcGIS.bundle */,
+				04039B38175B13920094E4A7 /* ArcGIS.framework */,
 				2F5D3AC5175AB79E00005E82 /* AudioToolbox.framework */,
 				2F5D3AC7175AB7A400005E82 /* CFNetwork.framework */,
 				2F5D3A9D175AA3EA00005E82 /* CoreGraphics.framework */,
@@ -200,6 +242,8 @@
 				2F5D3ADB175ABC7E00005E82 /* UFPostTableViewController.m */,
 				2F5D3AD7175ABB3B00005E82 /* UFSearchTableViewController.h */,
 				2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */,
+				04039B4C175B15A10094E4A7 /* UFProductListViewController.h */,
+				04039B4D175B15A10094E4A7 /* UFProductListViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +304,7 @@
 				2F5D3AAE175AA3EA00005E82 /* Default@2x.png in Resources */,
 				2F5D3AB0175AA3EA00005E82 /* Default-568h@2x.png in Resources */,
 				2F5D3AB3175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard in Resources */,
+				04039B3B175B13A40094E4A7 /* ArcGIS.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +323,7 @@
 				2F372668175B03A3007B3B23 /* UFUser.m in Sources */,
 				2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */,
 				2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */,
+				04039B4E175B15A10094E4A7 /* UFProductListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +376,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-all_load",
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -365,6 +417,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/UrbanFruitly/Third Party Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UrbanFruitly/UrbanFruitly-Prefix.pch";
@@ -380,6 +433,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/UrbanFruitly/Third Party Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UrbanFruitly/UrbanFruitly-Prefix.pch";
