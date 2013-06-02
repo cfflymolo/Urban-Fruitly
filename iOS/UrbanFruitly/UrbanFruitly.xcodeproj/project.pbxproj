@@ -16,8 +16,20 @@
 		2F5D3AAC175AA3EA00005E82 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AAB175AA3EA00005E82 /* Default.png */; };
 		2F5D3AAE175AA3EA00005E82 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AAD175AA3EA00005E82 /* Default@2x.png */; };
 		2F5D3AB0175AA3EA00005E82 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AAF175AA3EA00005E82 /* Default-568h@2x.png */; };
-		2F5D3AB3175AA3EA00005E82 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AB1175AA3EA00005E82 /* MainStoryboard.storyboard */; };
-		2F5D3AB6175AA3EA00005E82 /* UFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D3AB5175AA3EA00005E82 /* UFViewController.m */; };
+		2F5D3AB3175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AB1175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard */; };
+		2F5D3ABF175AB2AB00005E82 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3ABE175AB2AB00005E82 /* Parse.framework */; };
+		2F5D3AC4175AB65100005E82 /* UFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D3AC3175AB65100005E82 /* UFMainViewController.m */; };
+		2F5D3AC6175AB79E00005E82 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3AC5175AB79E00005E82 /* AudioToolbox.framework */; };
+		2F5D3AC8175AB7A400005E82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3AC7175AB7A400005E82 /* CFNetwork.framework */; };
+		2F5D3ACA175AB7B000005E82 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3AC9175AB7B000005E82 /* CoreLocation.framework */; };
+		2F5D3ACC175AB7C000005E82 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3ACB175AB7C000005E82 /* libz.1.1.3.dylib */; };
+		2F5D3ACE175AB7C800005E82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3ACD175AB7C800005E82 /* MobileCoreServices.framework */; };
+		2F5D3AD0175AB7CE00005E82 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3ACF175AB7CE00005E82 /* QuartzCore.framework */; };
+		2F5D3AD2175AB7D400005E82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3AD1175AB7D400005E82 /* Security.framework */; };
+		2F5D3AD4175AB7DD00005E82 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3AD3175AB7DD00005E82 /* StoreKit.framework */; };
+		2F5D3AD6175AB7EA00005E82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3AD5175AB7EA00005E82 /* SystemConfiguration.framework */; };
+		2F5D3AD9175ABB3B00005E82 /* UFSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */; };
+		2F5D3ADC175ABC7E00005E82 /* UFPostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D3ADB175ABC7E00005E82 /* UFPostTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +46,23 @@
 		2F5D3AAB175AA3EA00005E82 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2F5D3AAD175AA3EA00005E82 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2F5D3AAF175AA3EA00005E82 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2F5D3AB2175AA3EA00005E82 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		2F5D3AB4175AA3EA00005E82 /* UFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UFViewController.h; sourceTree = "<group>"; };
-		2F5D3AB5175AA3EA00005E82 /* UFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UFViewController.m; sourceTree = "<group>"; };
+		2F5D3AB2175AA3EA00005E82 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/UrbanFruitly_iPhone.storyboard; sourceTree = "<group>"; };
+		2F5D3ABE175AB2AB00005E82 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "UrbanFruitly/Third Party Frameworks/Parse.framework"; sourceTree = "<group>"; };
+		2F5D3AC2175AB65100005E82 /* UFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFMainViewController.h; path = Controllers/UFMainViewController.h; sourceTree = "<group>"; };
+		2F5D3AC3175AB65100005E82 /* UFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFMainViewController.m; path = Controllers/UFMainViewController.m; sourceTree = "<group>"; };
+		2F5D3AC5175AB79E00005E82 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2F5D3AC7175AB7A400005E82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2F5D3AC9175AB7B000005E82 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2F5D3ACB175AB7C000005E82 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		2F5D3ACD175AB7C800005E82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2F5D3ACF175AB7CE00005E82 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2F5D3AD1175AB7D400005E82 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2F5D3AD3175AB7DD00005E82 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2F5D3AD5175AB7EA00005E82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2F5D3AD7175ABB3B00005E82 /* UFSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFSearchTableViewController.h; path = Controllers/UFSearchTableViewController.h; sourceTree = "<group>"; };
+		2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFSearchTableViewController.m; path = Controllers/UFSearchTableViewController.m; sourceTree = "<group>"; };
+		2F5D3ADA175ABC7E00005E82 /* UFPostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFPostTableViewController.h; path = Controllers/UFPostTableViewController.h; sourceTree = "<group>"; };
+		2F5D3ADB175ABC7E00005E82 /* UFPostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFPostTableViewController.m; path = Controllers/UFPostTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +70,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5D3AD6175AB7EA00005E82 /* SystemConfiguration.framework in Frameworks */,
+				2F5D3AD4175AB7DD00005E82 /* StoreKit.framework in Frameworks */,
+				2F5D3AD2175AB7D400005E82 /* Security.framework in Frameworks */,
+				2F5D3AD0175AB7CE00005E82 /* QuartzCore.framework in Frameworks */,
+				2F5D3ACE175AB7C800005E82 /* MobileCoreServices.framework in Frameworks */,
+				2F5D3ACC175AB7C000005E82 /* libz.1.1.3.dylib in Frameworks */,
+				2F5D3ACA175AB7B000005E82 /* CoreLocation.framework in Frameworks */,
+				2F5D3A9E175AA3EA00005E82 /* CoreGraphics.framework in Frameworks */,
+				2F5D3AC8175AB7A400005E82 /* CFNetwork.framework in Frameworks */,
+				2F5D3AC6175AB79E00005E82 /* AudioToolbox.framework in Frameworks */,
 				2F5D3A9A175AA3EA00005E82 /* UIKit.framework in Frameworks */,
 				2F5D3A9C175AA3EA00005E82 /* Foundation.framework in Frameworks */,
-				2F5D3A9E175AA3EA00005E82 /* CoreGraphics.framework in Frameworks */,
+				2F5D3ABF175AB2AB00005E82 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +94,7 @@
 			children = (
 				2F5D3A9F175AA3EA00005E82 /* UrbanFruitly */,
 				2F5D3A98175AA3EA00005E82 /* Frameworks */,
+				2F5D3ABD175AB28500005E82 /* Third Party Frameworks */,
 				2F5D3A97175AA3EA00005E82 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,9 +110,18 @@
 		2F5D3A98175AA3EA00005E82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F5D3A99175AA3EA00005E82 /* UIKit.framework */,
-				2F5D3A9B175AA3EA00005E82 /* Foundation.framework */,
+				2F5D3AC5175AB79E00005E82 /* AudioToolbox.framework */,
+				2F5D3AC7175AB7A400005E82 /* CFNetwork.framework */,
 				2F5D3A9D175AA3EA00005E82 /* CoreGraphics.framework */,
+				2F5D3AC9175AB7B000005E82 /* CoreLocation.framework */,
+				2F5D3A9B175AA3EA00005E82 /* Foundation.framework */,
+				2F5D3ACB175AB7C000005E82 /* libz.1.1.3.dylib */,
+				2F5D3ACD175AB7C800005E82 /* MobileCoreServices.framework */,
+				2F5D3ACF175AB7CE00005E82 /* QuartzCore.framework */,
+				2F5D3AD1175AB7D400005E82 /* Security.framework */,
+				2F5D3AD3175AB7DD00005E82 /* StoreKit.framework */,
+				2F5D3AD5175AB7EA00005E82 /* SystemConfiguration.framework */,
+				2F5D3A99175AA3EA00005E82 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,11 +129,8 @@
 		2F5D3A9F175AA3EA00005E82 /* UrbanFruitly */ = {
 			isa = PBXGroup;
 			children = (
+				2F5D3AC1175AB35C00005E82 /* Controllers */,
 				2F5D3ABC175AA41B00005E82 /* Views */,
-				2F5D3AA8175AA3EA00005E82 /* UFAppDelegate.h */,
-				2F5D3AA9175AA3EA00005E82 /* UFAppDelegate.m */,
-				2F5D3AB4175AA3EA00005E82 /* UFViewController.h */,
-				2F5D3AB5175AA3EA00005E82 /* UFViewController.m */,
 				2F5D3AA0175AA3EA00005E82 /* Supporting Files */,
 			);
 			path = UrbanFruitly;
@@ -96,6 +139,8 @@
 		2F5D3AA0175AA3EA00005E82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F5D3AA8175AA3EA00005E82 /* UFAppDelegate.h */,
+				2F5D3AA9175AA3EA00005E82 /* UFAppDelegate.m */,
 				2F5D3AA1175AA3EA00005E82 /* UrbanFruitly-Info.plist */,
 				2F5D3AA2175AA3EA00005E82 /* InfoPlist.strings */,
 				2F5D3AA5175AA3EA00005E82 /* main.m */,
@@ -110,9 +155,30 @@
 		2F5D3ABC175AA41B00005E82 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2F5D3AB1175AA3EA00005E82 /* MainStoryboard.storyboard */,
+				2F5D3AB1175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard */,
+				2F5D3AD7175ABB3B00005E82 /* UFSearchTableViewController.h */,
+				2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */,
+				2F5D3ADA175ABC7E00005E82 /* UFPostTableViewController.h */,
+				2F5D3ADB175ABC7E00005E82 /* UFPostTableViewController.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		2F5D3ABD175AB28500005E82 /* Third Party Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F5D3ABE175AB2AB00005E82 /* Parse.framework */,
+			);
+			name = "Third Party Frameworks";
+			sourceTree = "<group>";
+		};
+		2F5D3AC1175AB35C00005E82 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F5D3AC2175AB65100005E82 /* UFMainViewController.h */,
+				2F5D3AC3175AB65100005E82 /* UFMainViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +236,7 @@
 				2F5D3AAC175AA3EA00005E82 /* Default.png in Resources */,
 				2F5D3AAE175AA3EA00005E82 /* Default@2x.png in Resources */,
 				2F5D3AB0175AA3EA00005E82 /* Default-568h@2x.png in Resources */,
-				2F5D3AB3175AA3EA00005E82 /* MainStoryboard.storyboard in Resources */,
+				2F5D3AB3175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +249,9 @@
 			files = (
 				2F5D3AA6175AA3EA00005E82 /* main.m in Sources */,
 				2F5D3AAA175AA3EA00005E82 /* UFAppDelegate.m in Sources */,
-				2F5D3AB6175AA3EA00005E82 /* UFViewController.m in Sources */,
+				2F5D3AC4175AB65100005E82 /* UFMainViewController.m in Sources */,
+				2F5D3AD9175ABB3B00005E82 /* UFSearchTableViewController.m in Sources */,
+				2F5D3ADC175ABC7E00005E82 /* UFPostTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,12 +266,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2F5D3AB1175AA3EA00005E82 /* MainStoryboard.storyboard */ = {
+		2F5D3AB1175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2F5D3AB2175AA3EA00005E82 /* en */,
 			);
-			name = MainStoryboard.storyboard;
+			name = UrbanFruitly_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -268,6 +336,10 @@
 		2F5D3ABA175AA3EA00005E82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UrbanFruitly/Third Party Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UrbanFruitly/UrbanFruitly-Prefix.pch";
 				INFOPLIST_FILE = "UrbanFruitly/UrbanFruitly-Info.plist";
@@ -279,6 +351,10 @@
 		2F5D3ABB175AA3EA00005E82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UrbanFruitly/Third Party Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UrbanFruitly/UrbanFruitly-Prefix.pch";
 				INFOPLIST_FILE = "UrbanFruitly/UrbanFruitly-Info.plist";

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="NVt-43-B6e">
             <objects>
-                <tabBarController id="b6w-Wn-wRq" sceneMemberID="viewController">
+                <tabBarController id="b6w-Wn-wRq" customClass="UFMainViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="kFI-zm-gFx">
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-1928" y="-17"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Post Table View Controller - Post a Harvest-->
         <scene sceneID="hkK-M8-021">
             <objects>
-                <tableViewController id="4xI-PG-0mi" sceneMemberID="viewController">
+                <tableViewController id="4xI-PG-0mi" customClass="UFPostTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6eJ-ef-EEE">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +73,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="changeTypeOfProduct" destination="4xI-PG-0mi" eventType="touchUpInside" id="JJu-Bd-ny1"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -236,7 +239,11 @@
                             <outlet property="delegate" destination="4xI-PG-0mi" id="AHF-0k-MzE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="DZy-Va-4kQ"/>
+                    <navigationItem key="navigationItem" title="Post a Harvest" id="DZy-Va-4kQ"/>
+                    <connections>
+                        <outlet property="productImageView" destination="QMC-cA-Hbz" id="kmX-IG-m7A"/>
+                        <outlet property="typeTextField" destination="1A5-sG-Hpk" id="Kbw-jP-hqS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNh-r1-uYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,12 +262,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iH-UU-GxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="297"/>
+            <point key="canvasLocation" x="-329" y="308"/>
         </scene>
-        <!--Table View Controller - Search-->
+        <!--Search Table View Controller - Search-->
         <scene sceneID="hKr-e9-eSN">
             <objects>
-                <tableViewController id="Hvh-oR-W9q" sceneMemberID="viewController">
+                <tableViewController id="Hvh-oR-W9q" customClass="UFSearchTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="75y-1Z-7uc">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,7 +361,13 @@
                             <outlet property="delegate" destination="Hvh-oR-W9q" id="Hxe-rr-zhY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="4jG-Kb-uJA"/>
+                    <navigationItem key="navigationItem" title="Search" id="4jG-Kb-uJA">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="ENE-i5-XMn">
+                            <connections>
+                                <action selector="signOut:" destination="Hvh-oR-W9q" id="JR0-TG-Jqd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swF-NI-Qck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,11 +401,11 @@
             </objects>
             <point key="canvasLocation" x="-329" y="-735"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Search-->
         <scene sceneID="oHW-UV-Kpm">
             <objects>
                 <navigationController id="DFs-hZ-yRD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2zv-44-rZ8"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="2zv-44-rZ8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nOd-a1-04J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -410,7 +423,6 @@
         <!--View Controller-->
         <scene sceneID="oub-nu-dxE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dpl-mE-lGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="7GA-LN-as1" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VAB-N2-uRD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
@@ -419,14 +431,15 @@
                     </view>
                     <toolbarItems/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpl-mE-lGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="240" y="-679"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Post-->
         <scene sceneID="0CI-5H-lYh">
             <objects>
                 <navigationController id="B1i-92-6vp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mil-GM-pJH"/>
+                    <tabBarItem key="tabBarItem" title="Post" id="mil-GM-pJH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ktd-Xm-14W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -494,6 +507,24 @@
             <point key="canvasLocation" x="-1388" y="708"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="UFMainViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMainViewController.h"/>
+        </class>
+        <class className="UFPostTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="productImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="typeTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="UFSearchTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
