@@ -203,6 +203,7 @@
                     <navigationItem key="navigationItem" title="Post a Harvest" id="DZy-Va-4kQ"/>
                     <connections>
                         <outlet property="descriptionTextField" destination="8b9-SI-Mpr" id="YZi-P6-tNq"/>
+                        <outlet property="expirationTextField" destination="BJO-tk-UOS" id="iMX-ZM-Nxp"/>
                         <outlet property="priceTextField" destination="DRH-Va-gMB" id="7gG-iT-VpF"/>
                         <outlet property="productImageView" destination="QMC-cA-Hbz" id="kmX-IG-m7A"/>
                         <outlet property="quantityTextField" destination="WQU-so-Y4h" id="1M4-ff-YqL"/>
@@ -522,41 +523,6 @@
             <point key="canvasLocation" x="304" y="-673"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="UFMainViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMainViewController.h"/>
-        </class>
-        <class className="UFPostTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="productImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="quantityTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="typeTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UFProductDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="quantityLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="vendorNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UFProductListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductListViewController.h"/>
-        </class>
-        <class className="UFSearchTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

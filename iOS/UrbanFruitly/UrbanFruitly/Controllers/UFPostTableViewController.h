@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UFPostTableViewController : UITableViewController
+@interface UFPostTableViewController : UITableViewController <UITextFieldDelegate>
 
 @end

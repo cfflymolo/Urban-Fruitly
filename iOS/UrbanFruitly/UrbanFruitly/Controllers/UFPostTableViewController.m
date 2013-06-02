@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @property (weak, nonatomic) IBOutlet UITextField *quantityTextField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+@property (weak, nonatomic) IBOutlet UITextField *expirationTextField;
 
 @property (strong, nonatomic) NSArray *productTypes;
 @property (strong, nonatomic) NSArray *expirationDurations;
@@ -48,6 +49,11 @@
     self.productTypes = @[@"Apple", @"Oranges", @"Avacado"];
     self.expirationDurations = @[@"1 Week", @"2 Weeks", @"3 Weeks"];
     self.typeTextField.enabled = NO;
+    self.expirationTextField.enabled = NO;
+    
+    self.priceTextField.delegate = self;
+    self.quantityTextField.delegate = self;
+    self.descriptionTextField.delegate = self;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,6 +62,12 @@
         [UIView animateWithDuration:0.5 animations:^{
             CGRect frame = self.typePickerView.frame;
             self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
+        }];
+    }
+    else if (indexPath.section == 1 && indexPath.row == 2) {
+        [UIView animateWithDuration:0.5 animations:^{
+            CGRect frame = self.expirationPickerView.frame;
+            self.expirationPickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
         }];
     }
 }
@@ -89,8 +101,23 @@
     if(pickerView == self.typePickerView)
         self.typeTextField.text = self.productTypes [row];
     else{
-        self.
+        self.expirationTextField.text = self.expirationDurations[row];
     }
+}
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    UITableViewCell *cell = (UITableViewCell*) [[textField superview] superview];
+    [(UITableView*)self.view scrollToRowAtIndexPath:[(UITableView*)self.view indexPathForCell:cell] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    
+    return YES;
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
