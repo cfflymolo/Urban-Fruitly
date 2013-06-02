@@ -11,4 +11,6 @@
 
 @interface UFProductListViewController : UIViewController <AGSMapViewLayerDelegate,AGSInfoTemplateDelegate,AGSCalloutDelegate>
 
+- (void) setType:(NSString*)type andDistance:(NSString*)distance;
+
 @end

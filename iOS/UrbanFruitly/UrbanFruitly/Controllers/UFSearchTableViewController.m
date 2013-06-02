@@ -7,6 +7,7 @@
 //
 
 #import "UFSearchTableViewController.h"
+#import "UFProductListViewController.h"
 #import <Parse/Parse.h>
 
 @interface UFSearchTableViewController ()
@@ -24,6 +25,11 @@
 {
     NSLog(@"user was logged out");
     [PFUser logOut];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UFProductListViewController* vc = segue.destinationViewController;
+    [vc setType:self.typeField.text andDistance:self.distField.text];                                       
 }
 
 @end

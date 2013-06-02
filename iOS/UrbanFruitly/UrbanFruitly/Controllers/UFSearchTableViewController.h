@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UFSearchTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UITextField *typeField;
+@property (weak, nonatomic) IBOutlet UITextField *distField;
 
 @end

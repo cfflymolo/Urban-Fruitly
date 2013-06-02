@@ -8,10 +8,13 @@
 
 #import "UFProductListViewController.h"
 #import "UFProductDetailViewController.h"
+#import <Parse/Parse.h>
 
 @interface UFProductListViewController (){
+    NSString *mytype,*mydistance;
     AGSSimpleMarkerSymbol *myAppleSymbol;
     AGSSimpleMarkerSymbol *myOrangeSymbol;
+    NSArray* results;
 }
 
 @property (strong,nonatomic) AGSMapView* mapView;
@@ -34,25 +37,50 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    _mapView = [[AGSMapView alloc] initWithFrame:self.view.bounds];
-    _mapView.layerDelegate = self;
-	_mapView.callout.delegate = self;
-    [self.view addSubview:_mapView];
     
-    AGSTiledMapServiceLayer *tiledLayer =
-    [AGSTiledMapServiceLayer
-     tiledMapServiceLayerWithURL:[NSURL URLWithString:@"http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"]];
-    [self.mapView addMapLayer:tiledLayer withName:@"Tiled Layer"];
-    
-    //other inits
-    self.myGraphicsLayer = [AGSGraphicsLayer graphicsLayer];
-    [self.mapView addMapLayer:self.myGraphicsLayer withName:@"Graphics Layer"];
-    
-    myAppleSymbol = [AGSSimpleMarkerSymbol simpleMarkerSymbol];
-    myAppleSymbol.color = [UIColor redColor];
+    [self performSelector:@selector(getResults) withObject:self];
+
     
 }
 
+
+- (void) setType:(NSString*)type andDistance:(NSString*)distance{
+    mytype = type;
+    mydistance = distance;
+}
+
+- (void) getResults{
+    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+        if (!error) {
+            double _dist = [mydistance doubleValue];
+            PFQuery *query = [PFQuery queryWithClassName:@"Product"];
+            [query whereKey:@"location" nearGeoPoint:geoPoint withinKilometers:_dist];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if(!error){
+                    results = objects;
+                    NSLog(@"Total count:%d",results.count);
+                    
+                    _mapView = [[AGSMapView alloc] initWithFrame:self.view.bounds];
+                    _mapView.layerDelegate = self;
+                    _mapView.callout.delegate = self;
+                    [self.view addSubview:_mapView];
+                    
+                    AGSTiledMapServiceLayer *tiledLayer =
+                    [AGSTiledMapServiceLayer
+                     tiledMapServiceLayerWithURL:[NSURL URLWithString:@"http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"]];
+                    [self.mapView addMapLayer:tiledLayer withName:@"Tiled Layer"];
+                    
+                    //other inits
+                    self.myGraphicsLayer = [AGSGraphicsLayer graphicsLayer];
+                    [self.mapView addMapLayer:self.myGraphicsLayer withName:@"Graphics Layer"];
+                    
+                    myAppleSymbol = [AGSSimpleMarkerSymbol simpleMarkerSymbol];
+                    myAppleSymbol.color = [UIColor redColor];
+                }
+            }];
+        }
+    }];
+}
 
 
 - (void)mapViewDidLoad:(AGSMapView *) mapView {
