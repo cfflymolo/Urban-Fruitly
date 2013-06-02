@@ -16,9 +16,14 @@
 }
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 @property (weak, nonatomic) IBOutlet UITextField *typeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *priceTextField;
+@property (weak, nonatomic) IBOutlet UITextField *quantityTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 
 @property (strong, nonatomic) NSArray *productTypes;
+@property (strong, nonatomic) NSArray *expirationDurations;
 @property (strong, nonatomic) UIPickerView *typePickerView;
+@property (strong, nonatomic) UIPickerView *expirationPickerView;
 @end
 
 @implementation UFPostTableViewController
@@ -30,11 +35,15 @@
     originalPickerFrame = CGRectMake(0, UIScreen.mainScreen.bounds.size.height, UIScreen.mainScreen.bounds.size.width ,TYPE_PICKERVIEW_HEIGHT);
     
     self.typePickerView = [[UIPickerView alloc] initWithFrame:originalPickerFrame];
-    self.typePickerView.dataSource = self;
-    self.typePickerView.delegate = self;
+    self.expirationPickerView = [[UIPickerView alloc] initWithFrame:originalPickerFrame];
+    
+    self.typePickerView.dataSource = self.expirationPickerView.dataSource = self;
+    self.typePickerView.delegate = self.expirationPickerView.delegate = self;
     [self.view addSubview:self.typePickerView];
+    [self.view addSubview:self.expirationPickerView];
     
     self.productTypes = @[@"Apple", @"Oranges", @"Avacado"];
+    self.expirationDurations = @[@"1 Week", @"2 Weeks", @"3 Weeks"];
     self.typeTextField.enabled = NO;
 }
 
