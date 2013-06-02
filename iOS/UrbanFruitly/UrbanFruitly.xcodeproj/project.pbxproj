@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F372668175B03A3007B3B23 /* UFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F372667175B03A3007B3B23 /* UFUser.m */; };
+		2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266A175B03B0007B3B23 /* UFProduct.m */; };
+		2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266D175B03B8007B3B23 /* UFTransaction.m */; };
 		2F5D3A9A175AA3EA00005E82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3A99175AA3EA00005E82 /* UIKit.framework */; };
 		2F5D3A9C175AA3EA00005E82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3A9B175AA3EA00005E82 /* Foundation.framework */; };
 		2F5D3A9E175AA3EA00005E82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3A9D175AA3EA00005E82 /* CoreGraphics.framework */; };
@@ -33,6 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F372666175B03A3007B3B23 /* UFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFUser.h; path = Models/UFUser.h; sourceTree = "<group>"; };
+		2F372667175B03A3007B3B23 /* UFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFUser.m; path = Models/UFUser.m; sourceTree = "<group>"; };
+		2F372669175B03B0007B3B23 /* UFProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFProduct.h; path = Models/UFProduct.h; sourceTree = "<group>"; };
+		2F37266A175B03B0007B3B23 /* UFProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFProduct.m; path = Models/UFProduct.m; sourceTree = "<group>"; };
+		2F37266C175B03B8007B3B23 /* UFTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFTransaction.h; path = Models/UFTransaction.h; sourceTree = "<group>"; };
+		2F37266D175B03B8007B3B23 /* UFTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFTransaction.m; path = Models/UFTransaction.m; sourceTree = "<group>"; };
 		2F5D3A96175AA3EA00005E82 /* UrbanFruitly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanFruitly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5D3A99175AA3EA00005E82 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2F5D3A9B175AA3EA00005E82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F372665175B0387007B3B23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F372666175B03A3007B3B23 /* UFUser.h */,
+				2F372667175B03A3007B3B23 /* UFUser.m */,
+				2F372669175B03B0007B3B23 /* UFProduct.h */,
+				2F37266A175B03B0007B3B23 /* UFProduct.m */,
+				2F37266C175B03B8007B3B23 /* UFTransaction.h */,
+				2F37266D175B03B8007B3B23 /* UFTransaction.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		2F5D3A8D175AA3EA00005E82 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +151,7 @@
 		2F5D3A9F175AA3EA00005E82 /* UrbanFruitly */ = {
 			isa = PBXGroup;
 			children = (
+				2F372665175B0387007B3B23 /* Models */,
 				2F5D3AC1175AB35C00005E82 /* Controllers */,
 				2F5D3ABC175AA41B00005E82 /* Views */,
 				2F5D3AA0175AA3EA00005E82 /* Supporting Files */,
@@ -156,10 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				2F5D3AB1175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard */,
-				2F5D3AD7175ABB3B00005E82 /* UFSearchTableViewController.h */,
-				2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */,
-				2F5D3ADA175ABC7E00005E82 /* UFPostTableViewController.h */,
-				2F5D3ADB175ABC7E00005E82 /* UFPostTableViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -177,6 +196,10 @@
 			children = (
 				2F5D3AC2175AB65100005E82 /* UFMainViewController.h */,
 				2F5D3AC3175AB65100005E82 /* UFMainViewController.m */,
+				2F5D3ADA175ABC7E00005E82 /* UFPostTableViewController.h */,
+				2F5D3ADB175ABC7E00005E82 /* UFPostTableViewController.m */,
+				2F5D3AD7175ABB3B00005E82 /* UFSearchTableViewController.h */,
+				2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +275,9 @@
 				2F5D3AC4175AB65100005E82 /* UFMainViewController.m in Sources */,
 				2F5D3AD9175ABB3B00005E82 /* UFSearchTableViewController.m in Sources */,
 				2F5D3ADC175ABC7E00005E82 /* UFPostTableViewController.m in Sources */,
+				2F372668175B03A3007B3B23 /* UFUser.m in Sources */,
+				2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */,
+				2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +408,7 @@
 				2F5D3ABB175AA3EA00005E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
