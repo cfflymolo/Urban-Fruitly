@@ -19,6 +19,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"UrbanFruitlyTableBG.png"]];
+
 }
 
 - (IBAction)signOut:(UIBarButtonItem *)sender

@@ -15,6 +15,7 @@
     AGSSimpleMarkerSymbol *myAppleSymbol;
     AGSSimpleMarkerSymbol *myOrangeSymbol;
     NSArray* results;
+    NSMutableDictionary* resdict;
 }
 
 @property (strong,nonatomic) AGSMapView* mapView;
@@ -29,6 +30,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        resdict = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -96,20 +98,25 @@
 }
 
 - (void) plotProductsOnTheMap{
-    AGSPoint* myMarkerPoint = [AGSPoint pointWithX:-118.2044
-                       y:34.0339
-		spatialReference:self.mapView.spatialReference];
+    for(PFObject* obj in results){
+        PFGeoPoint* gp = [obj objectForKey:@"location"];
+        AGSPoint* myMarkerPoint = [AGSPoint pointWithX:gp.longitude
+                           y:gp.latitude
+            spatialReference:self.mapView.spatialReference];
 
-    AGSGraphic* myGraphic =
-	[AGSGraphic graphicWithGeometry:myMarkerPoint
-                             symbol:myAppleSymbol
-                         attributes:nil
-               infoTemplateDelegate:nil];
+        AGSGraphic* myGraphic =
+        [AGSGraphic graphicWithGeometry:myMarkerPoint
+                                 symbol:myAppleSymbol
+                             attributes:nil
+                   infoTemplateDelegate:nil];
+        
+        //Add the graphic to the Graphics layer
+        [self.myGraphicsLayer addGraphic:myGraphic];
+        myGraphic.infoTemplateDelegate = self;
+        [resdict setValue:obj forKey:myGraphic];
+        
     
-    //Add the graphic to the Graphics layer
-    [self.myGraphicsLayer addGraphic:myGraphic];
-    myGraphic.infoTemplateDelegate = self;
-    
+    }
     //Tell the layer to redraw itself
   //  [self.myGraphicsLayer dataChanged];
 }
@@ -118,6 +125,9 @@
 //delegate methods
 
 - (NSString *)titleForGraphic:(AGSGraphic *)graphic screenPoint:(CGPoint)screen mapPoint:(AGSPoint *)map {
+    
+   // PFObject *obj = [resdict objectForKey:graphic];
+   // NSString* type = [obj objectForKey:@"type"];
     return @"Apples";
 }
 

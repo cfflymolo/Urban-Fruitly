@@ -287,6 +287,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="contentInset" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="ceU-90-mUc">
                                 <cells>
@@ -380,6 +381,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="distField" destination="yv0-LY-F8p" id="J2j-bH-FzR"/>
+                        <outlet property="tableView" destination="75y-1Z-7uc" id="KeV-V8-Cqw"/>
                         <outlet property="typeField" destination="anq-7i-yYt" id="p84-Eh-NB7"/>
                     </connections>
                 </tableViewController>
