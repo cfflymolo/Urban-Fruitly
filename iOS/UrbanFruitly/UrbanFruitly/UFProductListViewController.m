@@ -15,7 +15,7 @@
 }
 
 @property (strong,nonatomic) AGSMapView* mapView;
-@property (weak,nonatomic) AGSGraphicsLayer* myGraphicsLayer;
+@property (strong,nonatomic) AGSGraphicsLayer* myGraphicsLayer;
 
 @end
 

@@ -58,7 +58,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1 && indexPath.row == 0) {
+    
+    if(indexPath.section==0){
+        NSString *actionSheetTitle = @"Select Photo"; //Action Sheet Title
+        NSString *other1 = @"From Album";
+        NSString *other2 = @"Take Picture";
+        NSString *cancelTitle = @"Cancel";
+        UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                      initWithTitle:actionSheetTitle
+                                      delegate:self
+                                      cancelButtonTitle:cancelTitle
+                                      destructiveButtonTitle:nil
+                                      otherButtonTitles:other1, other2, nil];
+        [actionSheet showInView:self.view];
+    }
+    else if (indexPath.section == 1 && indexPath.row == 0) {
         [UIView animateWithDuration:0.5 animations:^{
             CGRect frame = self.typePickerView.frame;
             self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
@@ -71,6 +85,18 @@
         }];
     }
 }
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex==0){
+        NSLog(@"Pick from album");
+        [self pickPhotoFromAlbum];
+    }
+    else if(buttonIndex==1){
+        NSLog(@"Pick from Camera");
+        [self takePicture];
+    }
+}
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -119,5 +145,23 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+
+#pragma mark - Photo Picker Methods
+
+- (void)takePicture{
+    UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = (id)self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (void)pickPhotoFromAlbum{
+    UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = (id)self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
 
 @end
