@@ -6,11 +6,11 @@
 //
 //
 
-#import "UFProductListViewController.h"
+#import "UFProductMapViewController.h"
 #import "UFProductDetailViewController.h"
 #import <Parse/Parse.h>
 
-@interface UFProductListViewController (){
+@interface UFProductMapViewController (){
     NSString *mytype,*mydistance;
     AGSSimpleMarkerSymbol *myAppleSymbol;
     AGSSimpleMarkerSymbol *myOrangeSymbol;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation UFProductListViewController
+@implementation UFProductMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

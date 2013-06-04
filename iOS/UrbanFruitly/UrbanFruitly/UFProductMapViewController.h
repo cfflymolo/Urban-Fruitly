@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <ArcGIS/ArcGIS.h>
 
-@interface UFProductListViewController : UIViewController <AGSMapViewLayerDelegate,AGSInfoTemplateDelegate,AGSCalloutDelegate>
+@interface UFProductMapViewController : UIViewController <AGSMapViewLayerDelegate,AGSInfoTemplateDelegate,AGSCalloutDelegate>
 
 - (void) setType:(NSString*)type andDistance:(NSString*)distance;
 

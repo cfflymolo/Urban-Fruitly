@@ -64,17 +64,7 @@
 {
     
     if(indexPath.section==0){
-        NSString *actionSheetTitle = @"Select Photo"; //Action Sheet Title
-        NSString *other1 = @"From Album";
-        NSString *other2 = @"Take Picture";
-        NSString *cancelTitle = @"Cancel";
-        UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                      initWithTitle:actionSheetTitle
-                                      delegate:self
-                                      cancelButtonTitle:cancelTitle
-                                      destructiveButtonTitle:nil
-                                      otherButtonTitles:other1, other2, nil];
-        [actionSheet showInView:self.view];
+
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
         [UIView animateWithDuration:0.5 animations:^{
@@ -264,5 +254,19 @@
 
 - (IBAction)postData:(id)sender {
     [self saveProfileToTheCloud];
+}
+
+- (IBAction)selectPhotoButtonTapped:(id)sender {
+    NSString *actionSheetTitle = @"Select Photo"; //Action Sheet Title
+    NSString *other1 = @"From Album";
+    NSString *other2 = @"Take Picture";
+    NSString *cancelTitle = @"Cancel";
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:actionSheetTitle
+                                  delegate:self
+                                  cancelButtonTitle:cancelTitle
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:other1, other2, nil];
+    [actionSheet showInView:[self.view window]];
 }
 @end

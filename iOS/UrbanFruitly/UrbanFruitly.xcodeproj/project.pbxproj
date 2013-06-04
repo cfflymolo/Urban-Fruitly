@@ -17,7 +17,7 @@
 		04039B47175B13D10094E4A7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B46175B13D10094E4A7 /* libc++.dylib */; };
 		04039B49175B13DE0094E4A7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B48175B13DE0094E4A7 /* CoreText.framework */; };
 		04039B4B175B13E50094E4A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04039B4A175B13E50094E4A7 /* OpenGLES.framework */; };
-		04039B4E175B15A10094E4A7 /* UFProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04039B4D175B15A10094E4A7 /* UFProductListViewController.m */; };
+		04039B4E175B15A10094E4A7 /* UFProductMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04039B4D175B15A10094E4A7 /* UFProductMapViewController.m */; };
 		042B19E8175BC2D200F87B46 /* apple_002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 042B19E7175BC2D200F87B46 /* apple_002.jpg */; };
 		042B19EB175BC40C00F87B46 /* UFProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B19EA175BC40B00F87B46 /* UFProductDetailViewController.m */; };
 		042B19EE175BDDE500F87B46 /* UKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B19ED175BDDE500F87B46 /* UKImage.m */; };
@@ -63,15 +63,15 @@
 		04039B46175B13D10094E4A7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		04039B48175B13DE0094E4A7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		04039B4A175B13E50094E4A7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		04039B4C175B15A10094E4A7 /* UFProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductListViewController.h; sourceTree = "<group>"; };
-		04039B4D175B15A10094E4A7 /* UFProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductListViewController.m; sourceTree = "<group>"; };
+		04039B4C175B15A10094E4A7 /* UFProductMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductMapViewController.h; sourceTree = "<group>"; };
+		04039B4D175B15A10094E4A7 /* UFProductMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductMapViewController.m; sourceTree = "<group>"; };
 		042B19E7175BC2D200F87B46 /* apple_002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple_002.jpg; sourceTree = "<group>"; };
 		042B19E9175BC40B00F87B46 /* UFProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductDetailViewController.h; sourceTree = "<group>"; };
 		042B19EA175BC40B00F87B46 /* UFProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductDetailViewController.m; sourceTree = "<group>"; };
-		042B19EC175BDDE500F87B46 /* UKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKImage.h; sourceTree = "<group>"; };
-		042B19ED175BDDE500F87B46 /* UKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKImage.m; sourceTree = "<group>"; };
-		042B19EF175BDECD00F87B46 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		042B19F0175BDECD00F87B46 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		042B19EC175BDDE500F87B46 /* UKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UKImage.h; path = UrbanFruitly/UKImage.h; sourceTree = "<group>"; };
+		042B19ED175BDDE500F87B46 /* UKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UKImage.m; path = UrbanFruitly/UKImage.m; sourceTree = "<group>"; };
+		042B19EF175BDECD00F87B46 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = UrbanFruitly/MBProgressHUD.h; sourceTree = "<group>"; };
+		042B19F0175BDECD00F87B46 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = UrbanFruitly/MBProgressHUD.m; sourceTree = "<group>"; };
 		042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UrbanFruitlyTableBG.png; sourceTree = "<group>"; };
 		042B19F6175BFAEC00F87B46 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		042B19F8175BFB2E00F87B46 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -146,6 +146,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AD1362175E9A8D00B00421 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				042B19F8175BFB2E00F87B46 /* Default.png */,
+				042B19F6175BFAEC00F87B46 /* Default@2x.png */,
+				042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */,
+				042B19E7175BC2D200F87B46 /* apple_002.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		04AD1363175E9A9D00B00421 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				042B19EF175BDECD00F87B46 /* MBProgressHUD.h */,
+				042B19F0175BDECD00F87B46 /* MBProgressHUD.m */,
+				042B19EC175BDDE500F87B46 /* UKImage.h */,
+				042B19ED175BDDE500F87B46 /* UKImage.m */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
 		2F372665175B0387007B3B23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,10 +184,8 @@
 		2F5D3A8D175AA3EA00005E82 = {
 			isa = PBXGroup;
 			children = (
-				042B19F8175BFB2E00F87B46 /* Default.png */,
-				042B19F6175BFAEC00F87B46 /* Default@2x.png */,
-				042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */,
-				042B19E7175BC2D200F87B46 /* apple_002.jpg */,
+				04AD1363175E9A9D00B00421 /* External */,
+				04AD1362175E9A8D00B00421 /* Resources */,
 				2F5D3A9F175AA3EA00005E82 /* UrbanFruitly */,
 				2F5D3A98175AA3EA00005E82 /* Frameworks */,
 				2F5D3ABD175AB28500005E82 /* Third Party Frameworks */,
@@ -256,18 +276,14 @@
 		2F5D3AC1175AB35C00005E82 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				042B19EF175BDECD00F87B46 /* MBProgressHUD.h */,
-				042B19F0175BDECD00F87B46 /* MBProgressHUD.m */,
-				042B19EC175BDDE500F87B46 /* UKImage.h */,
-				042B19ED175BDDE500F87B46 /* UKImage.m */,
 				2F5D3AC2175AB65100005E82 /* UFMainViewController.h */,
 				2F5D3AC3175AB65100005E82 /* UFMainViewController.m */,
 				2F5D3ADA175ABC7E00005E82 /* UFPostTableViewController.h */,
 				2F5D3ADB175ABC7E00005E82 /* UFPostTableViewController.m */,
 				2F5D3AD7175ABB3B00005E82 /* UFSearchTableViewController.h */,
 				2F5D3AD8175ABB3B00005E82 /* UFSearchTableViewController.m */,
-				04039B4C175B15A10094E4A7 /* UFProductListViewController.h */,
-				04039B4D175B15A10094E4A7 /* UFProductListViewController.m */,
+				04039B4C175B15A10094E4A7 /* UFProductMapViewController.h */,
+				04039B4D175B15A10094E4A7 /* UFProductMapViewController.m */,
 				042B19E9175BC40B00F87B46 /* UFProductDetailViewController.h */,
 				042B19EA175BC40B00F87B46 /* UFProductDetailViewController.m */,
 			);
@@ -352,7 +368,7 @@
 				2F372668175B03A3007B3B23 /* UFUser.m in Sources */,
 				2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */,
 				2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */,
-				04039B4E175B15A10094E4A7 /* UFProductListViewController.m in Sources */,
+				04039B4E175B15A10094E4A7 /* UFProductMapViewController.m in Sources */,
 				042B19EB175BC40C00F87B46 /* UFProductDetailViewController.m in Sources */,
 				042B19EE175BDDE500F87B46 /* UKImage.m in Sources */,
 				042B19F1175BDECD00F87B46 /* MBProgressHUD.m in Sources */,

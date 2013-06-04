@@ -10,5 +10,6 @@
 
 @interface UFPostTableViewController : UITableViewController <UITextFieldDelegate,UIActionSheetDelegate>
 - (IBAction)postData:(id)sender;
+- (IBAction)selectPhotoButtonTapped:(id)sender;
 
 @end

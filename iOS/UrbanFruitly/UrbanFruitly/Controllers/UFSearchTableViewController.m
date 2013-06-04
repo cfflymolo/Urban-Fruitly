@@ -7,7 +7,7 @@
 //
 
 #import "UFSearchTableViewController.h"
-#import "UFProductListViewController.h"
+#import "UFProductMapViewController.h"
 #import <Parse/Parse.h>
 
 @interface UFSearchTableViewController ()
@@ -32,7 +32,7 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    UFProductListViewController* vc = segue.destinationViewController;
+    UFProductMapViewController* vc = segue.destinationViewController;
     [vc setType:self.typeField.text andDistance:self.distField.text];                                       
 }
 
