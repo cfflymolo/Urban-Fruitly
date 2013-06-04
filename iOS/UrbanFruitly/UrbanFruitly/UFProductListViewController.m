@@ -90,7 +90,8 @@
     //for example, show the current location on the map
     [self.mapView.locationDisplay startDataSource];
     //zoom to an area
-    AGSEnvelope *envelope = [AGSEnvelope envelopeWithXmin:-118.0 ymin:33.50 xmax:-118.3  ymax:34.50 spatialReference:mapView.spatialReference];
+   // AGSEnvelope *envelope = [AGSEnvelope envelopeWithXmin:-118.0 ymin:33.50 xmax:-118.3  ymax:34.50 spatialReference:mapView.spatialReference];
+    AGSEnvelope *envelope = [AGSEnvelope envelopeWithXmin:-118.3200 ymin:34.0300 xmax:-118.1200  ymax:34.0500 spatialReference:mapView.spatialReference];
     [self.mapView zoomToEnvelope:envelope animated:NO];
     
     [self plotProductsOnTheMap];

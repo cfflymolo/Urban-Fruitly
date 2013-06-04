@@ -19,7 +19,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"UrbanFruitlyTableBG.png"]];
+
+    self.typeField.delegate = self;
+    self.distField.delegate = self;
 
 }
 
@@ -33,5 +35,21 @@
     UFProductListViewController* vc = segue.destinationViewController;
     [vc setType:self.typeField.text andDistance:self.distField.text];                                       
 }
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    UITableViewCell *cell = (UITableViewCell*) [[textField superview] superview];
+    [(UITableView*)self.view scrollToRowAtIndexPath:[(UITableView*)self.view indexPathForCell:cell] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    
+    return YES;
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 @end

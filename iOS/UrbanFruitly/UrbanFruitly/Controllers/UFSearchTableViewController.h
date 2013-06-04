@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UFSearchTableViewController : UITableViewController
+@interface UFSearchTableViewController : UITableViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *typeField;
 @property (weak, nonatomic) IBOutlet UITextField *distField;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

@@ -23,6 +23,8 @@
 		042B19EE175BDDE500F87B46 /* UKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B19ED175BDDE500F87B46 /* UKImage.m */; };
 		042B19F1175BDECD00F87B46 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B19F0175BDECD00F87B46 /* MBProgressHUD.m */; };
 		042B19F5175BF9AE00F87B46 /* UrbanFruitlyTableBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */; };
+		042B19F7175BFAEC00F87B46 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B19F6175BFAEC00F87B46 /* Default@2x.png */; };
+		042B19F9175BFB2E00F87B46 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B19F8175BFB2E00F87B46 /* Default.png */; };
 		2F372668175B03A3007B3B23 /* UFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F372667175B03A3007B3B23 /* UFUser.m */; };
 		2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266A175B03B0007B3B23 /* UFProduct.m */; };
 		2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266D175B03B8007B3B23 /* UFTransaction.m */; };
@@ -33,7 +35,6 @@
 		2F5D3AA6175AA3EA00005E82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D3AA5175AA3EA00005E82 /* main.m */; };
 		2F5D3AAA175AA3EA00005E82 /* UFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D3AA9175AA3EA00005E82 /* UFAppDelegate.m */; };
 		2F5D3AAC175AA3EA00005E82 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AAB175AA3EA00005E82 /* Default.png */; };
-		2F5D3AAE175AA3EA00005E82 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AAD175AA3EA00005E82 /* Default@2x.png */; };
 		2F5D3AB0175AA3EA00005E82 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AAF175AA3EA00005E82 /* Default-568h@2x.png */; };
 		2F5D3AB3175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D3AB1175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard */; };
 		2F5D3ABF175AB2AB00005E82 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5D3ABE175AB2AB00005E82 /* Parse.framework */; };
@@ -72,6 +73,8 @@
 		042B19EF175BDECD00F87B46 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		042B19F0175BDECD00F87B46 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UrbanFruitlyTableBG.png; sourceTree = "<group>"; };
+		042B19F6175BFAEC00F87B46 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		042B19F8175BFB2E00F87B46 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2F372666175B03A3007B3B23 /* UFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFUser.h; path = Models/UFUser.h; sourceTree = "<group>"; };
 		2F372667175B03A3007B3B23 /* UFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFUser.m; path = Models/UFUser.m; sourceTree = "<group>"; };
 		2F372669175B03B0007B3B23 /* UFProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFProduct.h; path = Models/UFProduct.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 		2F5D3A8D175AA3EA00005E82 = {
 			isa = PBXGroup;
 			children = (
+				042B19F8175BFB2E00F87B46 /* Default.png */,
+				042B19F6175BFAEC00F87B46 /* Default@2x.png */,
 				042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */,
 				042B19E7175BC2D200F87B46 /* apple_002.jpg */,
 				2F5D3A9F175AA3EA00005E82 /* UrbanFruitly */,
@@ -322,12 +327,13 @@
 			files = (
 				2F5D3AA4175AA3EA00005E82 /* InfoPlist.strings in Resources */,
 				2F5D3AAC175AA3EA00005E82 /* Default.png in Resources */,
-				2F5D3AAE175AA3EA00005E82 /* Default@2x.png in Resources */,
 				2F5D3AB0175AA3EA00005E82 /* Default-568h@2x.png in Resources */,
 				2F5D3AB3175AA3EA00005E82 /* UrbanFruitly_iPhone.storyboard in Resources */,
 				04039B3B175B13A40094E4A7 /* ArcGIS.bundle in Resources */,
 				042B19E8175BC2D200F87B46 /* apple_002.jpg in Resources */,
 				042B19F5175BF9AE00F87B46 /* UrbanFruitlyTableBG.png in Resources */,
+				042B19F7175BFAEC00F87B46 /* Default@2x.png in Resources */,
+				042B19F9175BFB2E00F87B46 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
