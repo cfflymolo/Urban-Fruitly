@@ -11,7 +11,11 @@
 #import "UFProductSelectionTableViewController.h"
 
 @interface UFPostTableViewController : UFAccountRequiredTableViewController <UITextFieldDelegate,UIActionSheetDelegate,UFProductSelectionTableViewControllerDelegate>
+
+
+
 - (IBAction)postData:(id)sender;
 - (IBAction)selectPhotoButtonTapped:(id)sender;
+- (IBAction)gpsLocationButtonTapped:(id)sender;
 
 @end

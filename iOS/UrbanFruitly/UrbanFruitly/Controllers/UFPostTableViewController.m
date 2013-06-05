@@ -9,6 +9,7 @@
 #import "UFPostTableViewController.h"
 #import "UKImage.h"
 #import "MBProgressHUD.h"
+#import "GradientButton.h"
 #import <Parse/Parse.h>
 
 #define TYPE_PICKERVIEW_HEIGHT 180
@@ -17,6 +18,7 @@
 {
     CGRect originalPickerFrame;
     MBProgressHUD* progressHud;
+    BOOL useGPS;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 @property (weak, nonatomic) IBOutlet UITextField *productTypeTextField;
@@ -24,6 +26,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *quantityTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *expirationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *gpsLocationButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *postButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *selectPhotoButton;
+
 
 @property (strong, nonatomic) NSArray *expirationDurations;
 @property (strong, nonatomic) UIPickerView *expirationPickerView;
@@ -34,6 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    useGPS = false;
     
     originalPickerFrame = CGRectMake(0, UIScreen.mainScreen.bounds.size.height, UIScreen.mainScreen.bounds.size.width ,TYPE_PICKERVIEW_HEIGHT);
     
@@ -48,6 +59,12 @@
     
     self.priceTextField.delegate = self;
     self.quantityTextField.delegate = self;
+    self.addressTextField.delegate = self;
+    
+    [self setAppearance];
+    
+    self.addressTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+
 }
 
 
@@ -63,9 +80,9 @@
 //            self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
 //        }];
 //    }
-    else if (indexPath.section == 1 && indexPath.row == 2) {
+    else if (indexPath.section == 1 && indexPath.row == 3) {
         [UIView animateWithDuration:0.5 animations:^{
-            CGRect frame = self.expirationPickerView.frame;
+            CGRect frame = originalPickerFrame;
             self.expirationPickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
         }];
     }
@@ -156,6 +173,7 @@
     UIImage* smallImage = [image scaleImageToSize:smallSize];
     //set image
     self.productImageView.image = smallImage;
+    self.productImageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 
@@ -272,4 +290,38 @@
                                   otherButtonTitles:other1, other2, nil];
     [actionSheet showInView:[self.view window]];
 }
+
+- (IBAction)gpsLocationButtonTapped:(id)sender {
+    useGPS = YES;
+    self.addressTextField.text = @"Using GPS Location";
+}
+
+#pragma mark - Appearance methods
+
+- (void) setAppearance{
+    UIImage* gpsButtonImage = [UIImage imageNamed:@"whiteButtonHighlight"];
+    gpsButtonImage = [gpsButtonImage resizableImageWithCapInsets:UIEdgeInsetsMake(18,18,18,18)];
+    [self.gpsLocationButton setBackgroundImage:gpsButtonImage forState:UIControlStateNormal];
+
+    UIImageView* iconView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 20, 20)];
+    iconView.image = [UIImage imageNamed:@"74-location"];
+    [self.gpsLocationButton addSubview:iconView];
+    
+    UIImageView* tableBgView = [[UIImageView alloc] initWithFrame:self.tableView.bounds];
+    tableBgView.image = [[UIImage imageNamed:@"squairy_light"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeTile];
+    self.tableView.backgroundView = tableBgView;
+    
+    //post button
+    UIImage* greenButtonImage = [[UIImage imageNamed:@"greenButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(18,18,18,18)];
+//    UIImage* greenButtonHighlightImage = [[UIImage imageNamed:@"greenButtonHighlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(18,18,18,18)];
+    [self.postButton setBackgroundImage:greenButtonImage forState:UIControlStateNormal];
+//    [self.postButton setBackgroundImage:greenButtonHighlightImage forState:UIControlStateHighlighted];
+    
+    //photo button
+    UIImage* whiteButtonImage = [[UIImage imageNamed:@"whiteButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(18,18,18,18)];
+    [self.selectPhotoButton setBackgroundImage:whiteButtonImage forState:UIControlStateNormal];
+    
+    
+}
+
 @end

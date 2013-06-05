@@ -12,9 +12,17 @@
 
 @interface UFSearchTableViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+
+
 @end
 
 @implementation UFSearchTableViewController
+
+- (void) viewDidLoad{
+    [super viewDidLoad];
+    [self setAppearance];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -61,6 +69,18 @@
 
 - (void)productTypeSelected:(NSString *)type{
     self.typeField.text = type;
+}
+
+#pragma mark - Appearance
+
+- (void) setAppearance{
+    UIImage* greenButtonImage = [[UIImage imageNamed:@"greenButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(18,18,18,18)];
+    [self.searchButton setBackgroundImage:greenButtonImage forState:UIControlStateNormal];
+
+    UIImageView* tableBgView = [[UIImageView alloc] initWithFrame:self.tableView.bounds];
+    tableBgView.image = [[UIImage imageNamed:@"squairy_light"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeTile];
+    self.tableView.backgroundView = tableBgView;
+
 }
 
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UFProductSelectionTableViewController.h"
+#import "GradientButton.h"
 
 @interface UFSearchTableViewController : UITableViewController <UITextFieldDelegate,UFProductSelectionTableViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *typeField;

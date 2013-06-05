@@ -30,7 +30,7 @@
             <objects>
                 <tableViewController id="4xI-PG-0mi" customClass="UFPostTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6eJ-ef-EEE">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -44,8 +44,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="QMC-cA-Hbz">
-                                                    <rect key="frame" x="50" y="7" width="200" height="200"/>
-                                                    <color key="backgroundColor" red="0.66147076370000002" green="0.66147076370000002" blue="0.66147076370000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="7" y="6" width="287" height="201"/>
+                                                    <color key="backgroundColor" red="0.83250671241050123" green="0.83250671241050123" blue="0.83250671241050123" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -58,12 +58,12 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mgq-F0-93n">
-                                                    <rect key="frame" x="48" y="7" width="200" height="31"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mgq-F0-93n">
+                                                    <rect key="frame" x="11" y="8" width="282" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                                     <state key="normal" title="Select Photo">
-                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.66147076370000002" green="0.66147076370000002" blue="0.66147076370000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="highlighted">
@@ -88,7 +88,7 @@
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What is it ?" textAlignment="center" minimumFontSize="17" id="1A5-sG-Hpk">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What fruit is it ?" textAlignment="center" minimumFontSize="17" id="1A5-sG-Hpk">
                                                     <rect key="frame" x="20" y="7" width="260" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -107,7 +107,38 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price per Item ($)" textAlignment="center" minimumFontSize="17" id="EPs-SO-WKc">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Use GPS Location OR Type Address" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" id="EPs-SO-WKc">
+                                                    <rect key="frame" x="47" y="7" width="243" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8DJ-yx-Ggv">
+                                                    <rect key="frame" x="11" y="7" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="gpsLocationButtonTapped:" destination="4xI-PG-0mi" eventType="touchUpInside" id="E8d-eK-ard"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="40m-gj-ZaX">
+                                        <rect key="frame" x="0.0" y="384" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price per Item ($)" textAlignment="center" minimumFontSize="17" id="Thd-9w-ZL5">
                                                     <rect key="frame" x="20" y="7" width="260" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -117,13 +148,13 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ymP-bk-BzT">
-                                        <rect key="frame" x="0.0" y="384" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="428" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="For how many weeks will it stay fresh ?" textAlignment="center" minimumFontSize="17" id="gbC-kY-LiU">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Posting Duration (in Weeks)" textAlignment="center" minimumFontSize="17" id="gbC-kY-LiU">
                                                     <rect key="frame" x="20" y="7" width="260" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -133,7 +164,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vZI-x5-xms">
-                                        <rect key="frame" x="0.0" y="428" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="472" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -150,10 +181,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="szC-Mc-wAd">
+                            <tableViewSection headerTitle="Say Something" id="szC-Mc-wAd">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" rowHeight="105" id="P7Y-q1-P9X">
-                                        <rect key="frame" x="0.0" y="493" width="320" height="107"/>
+                                        <rect key="frame" x="0.0" y="563" width="320" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="104"/>
@@ -175,17 +206,17 @@
                             <tableViewSection id="OOi-gH-URE">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="0wm-0B-1XU">
-                                        <rect key="frame" x="0.0" y="620" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="690" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s9x-gG-SBv">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s9x-gG-SBv">
                                                     <rect key="frame" x="0.0" y="-1" width="300" height="44"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                                     <state key="normal" title="Post">
-                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="highlighted">
@@ -207,13 +238,19 @@
                             <outlet property="delegate" destination="4xI-PG-0mi" id="AHF-0k-MzE"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Post Your Produce" id="DZy-Va-4kQ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addressTextField" destination="EPs-SO-WKc" id="o1U-Ou-EZO"/>
                         <outlet property="expirationTextField" destination="gbC-kY-LiU" id="zzZ-Uf-USf"/>
-                        <outlet property="priceTextField" destination="EPs-SO-WKc" id="vjp-fa-rL4"/>
+                        <outlet property="gpsLocationButton" destination="8DJ-yx-Ggv" id="XF6-rH-Gf2"/>
+                        <outlet property="postButton" destination="s9x-gG-SBv" id="IgE-50-I1c"/>
+                        <outlet property="priceTextField" destination="Thd-9w-ZL5" id="AC2-8C-5Rh"/>
                         <outlet property="productImageView" destination="QMC-cA-Hbz" id="kmX-IG-m7A"/>
                         <outlet property="productTypeTextField" destination="1A5-sG-Hpk" id="gdf-Jx-l2z"/>
                         <outlet property="quantityTextField" destination="kWo-zo-eBf" id="0uG-Yu-XLC"/>
+                        <outlet property="selectPhotoButton" destination="mgq-F0-93n" id="e6s-hJ-u8T"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNh-r1-uYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,7 +262,7 @@
             <objects>
                 <tableViewController id="KMf-BF-J2z" customClass="UFProductSelectionTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Rxo-uZ-SeA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -904,7 +941,7 @@
             </objects>
             <point key="canvasLocation" x="-154" y="732"/>
         </scene>
-        <!--Search Table View Controller - Search-->
+        <!--Search Table View Controller - Find-->
         <scene sceneID="hKr-e9-eSN">
             <objects>
                 <tableViewController id="Hvh-oR-W9q" customClass="UFSearchTableViewController" sceneMemberID="viewController">
@@ -912,11 +949,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <inset key="contentInset" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                        <inset key="contentInset" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="ceU-90-mUc">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XfR-qz-Sby">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" id="XfR-qz-Sby">
                                         <rect key="frame" x="0.0" y="10" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -962,11 +999,11 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xnS-K5-6Uy">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xnS-K5-6Uy">
                                                     <rect key="frame" x="0.0" y="-1" width="300" height="44"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="Search">
-                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                                    <state key="normal" title="Find Fruits">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="highlighted">
@@ -988,9 +1025,10 @@
                             <outlet property="delegate" destination="Hvh-oR-W9q" id="Hxe-rr-zhY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="4jG-Kb-uJA"/>
+                    <navigationItem key="navigationItem" title="Find" id="4jG-Kb-uJA"/>
                     <connections>
                         <outlet property="distField" destination="yv0-LY-F8p" id="J2j-bH-FzR"/>
+                        <outlet property="searchButton" destination="xnS-K5-6Uy" id="HzL-Wb-TAp"/>
                         <outlet property="tableView" destination="75y-1Z-7uc" id="KeV-V8-Cqw"/>
                         <outlet property="typeField" destination="anq-7i-yYt" id="p84-Eh-NB7"/>
                     </connections>
@@ -1206,13 +1244,18 @@
         <class className="UFPostTableViewController" superclassName="UFAccountRequiredTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="gpsLocationButtonTapped:"/>
                 <relationship kind="action" name="postData:"/>
                 <relationship kind="action" name="selectPhotoButtonTapped:"/>
+                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="expirationTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gpsLocationButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="postButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="productImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="productTypeTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="quantityTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="selectPhotoButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="UFProductDetailViewController" superclassName="UIViewController">
@@ -1237,6 +1280,7 @@
             <relationships>
                 <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="distField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="typeField" candidateClass="UITextField"/>
             </relationships>
