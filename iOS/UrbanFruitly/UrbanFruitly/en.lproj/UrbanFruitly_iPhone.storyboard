@@ -262,7 +262,7 @@
             <objects>
                 <tableViewController id="KMf-BF-J2z" customClass="UFProductSelectionTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Rxo-uZ-SeA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1231,74 +1231,12 @@
         <image name="168-upload-photo-2.png" width="22" height="25"/>
         <image name="259-list.png" width="20" height="14"/>
     </resources>
-    <classes>
-        <class className="UFAccountRequiredTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFAccountRequiredTableViewController.h"/>
-        </class>
-        <class className="UFMainViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMainViewController.h"/>
-        </class>
-        <class className="UFMyPostingsTableViewController" superclassName="UFAccountRequiredTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMyPostingsTableViewController.h"/>
-        </class>
-        <class className="UFPostTableViewController" superclassName="UFAccountRequiredTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="gpsLocationButtonTapped:"/>
-                <relationship kind="action" name="postData:"/>
-                <relationship kind="action" name="selectPhotoButtonTapped:"/>
-                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="expirationTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gpsLocationButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="postButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="productImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="productTypeTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="quantityTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="selectPhotoButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="UFProductDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="quantityLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="vendorNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UFProductMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductMapViewController.h"/>
-        </class>
-        <class className="UFProductSelectionTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductSelectionTableViewController.h"/>
-        </class>
-        <class className="UFSearchTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="distField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="typeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UFSignupRequestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSignupRequestViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="login:"/>
-                <relationship kind="action" name="signup:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ri5-7z-R4I"/>
+        <segue reference="LHk-le-zbN"/>
     </inferredMetricsTieBreakers>
 </document>

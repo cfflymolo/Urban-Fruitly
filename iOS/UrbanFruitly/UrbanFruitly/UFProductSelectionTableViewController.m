@@ -23,6 +23,11 @@
     return self;
 }
 
+- (void) viewDidLoad{
+    [super viewDidLoad];
+    [self setAppearance];
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -31,6 +36,12 @@
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:path];
     [self.delegate productTypeSelected:cell.textLabel.text];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) setAppearance{
+    UIImageView* tableBgView = [[UIImageView alloc] initWithFrame:self.tableView.bounds];
+    tableBgView.image = [[UIImage imageNamed:@"squairy_light"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeTile];
+    self.tableView.backgroundView = tableBgView;
 }
 
 @end

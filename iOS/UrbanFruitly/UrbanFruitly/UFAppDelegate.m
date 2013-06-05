@@ -7,6 +7,7 @@
 //
 
 #import "UFAppDelegate.h"
+#import "UFAppearance.h"
 #import <Parse/Parse.h>
 
 @implementation UFAppDelegate
@@ -16,6 +17,7 @@
     [Parse setApplicationId:@"RMZOaEykJSfBsSrUO8Uwqi5Wqj3PUzDG0IK9l5Fl"
                   clientKey:@"7fbdHQzx2fMyzap0quJgW1zQsAz9N8h4qefzxwYq"];
 
+    [UFAppearance setAppearance];
     return YES;
 }
 							
