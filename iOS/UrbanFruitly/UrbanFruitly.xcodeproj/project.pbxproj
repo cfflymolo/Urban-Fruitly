@@ -25,6 +25,10 @@
 		042B19F5175BF9AE00F87B46 /* UrbanFruitlyTableBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */; };
 		042B19F7175BFAEC00F87B46 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B19F6175BFAEC00F87B46 /* Default@2x.png */; };
 		042B19F9175BFB2E00F87B46 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B19F8175BFB2E00F87B46 /* Default.png */; };
+		04AD1366175E9E3600B00421 /* UFSignupRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD1365175E9E3600B00421 /* UFSignupRequestViewController.m */; };
+		04AD1369175EA22A00B00421 /* UFAccountRequiredTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD1368175EA22A00B00421 /* UFAccountRequiredTableViewController.m */; };
+		04AD136C175EA6C600B00421 /* UFMyPostingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD136B175EA6C600B00421 /* UFMyPostingsTableViewController.m */; };
+		04AD136F175EAE2000B00421 /* UFProductSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD136E175EAE1F00B00421 /* UFProductSelectionTableViewController.m */; };
 		2F372668175B03A3007B3B23 /* UFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F372667175B03A3007B3B23 /* UFUser.m */; };
 		2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266A175B03B0007B3B23 /* UFProduct.m */; };
 		2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266D175B03B8007B3B23 /* UFTransaction.m */; };
@@ -75,6 +79,15 @@
 		042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UrbanFruitlyTableBG.png; sourceTree = "<group>"; };
 		042B19F6175BFAEC00F87B46 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		042B19F8175BFB2E00F87B46 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		04AD1364175E9E3600B00421 /* UFSignupRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFSignupRequestViewController.h; sourceTree = "<group>"; };
+		04AD1365175E9E3600B00421 /* UFSignupRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFSignupRequestViewController.m; sourceTree = "<group>"; };
+		04AD1367175EA22A00B00421 /* UFAccountRequiredTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFAccountRequiredTableViewController.h; sourceTree = "<group>"; };
+		04AD1368175EA22A00B00421 /* UFAccountRequiredTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFAccountRequiredTableViewController.m; sourceTree = "<group>"; };
+		04AD136A175EA6C600B00421 /* UFMyPostingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFMyPostingsTableViewController.h; sourceTree = "<group>"; };
+		04AD136B175EA6C600B00421 /* UFMyPostingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFMyPostingsTableViewController.m; sourceTree = "<group>"; };
+		04AD136D175EAE1F00B00421 /* UFProductSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductSelectionTableViewController.h; sourceTree = "<group>"; };
+		04AD136E175EAE1F00B00421 /* UFProductSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductSelectionTableViewController.m; sourceTree = "<group>"; };
+		04AD1370175EAF8900B00421 /* UFProductSelectionTableViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UFProductSelectionTableViewControllerDelegate.h; sourceTree = "<group>"; };
 		2F372666175B03A3007B3B23 /* UFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFUser.h; path = Models/UFUser.h; sourceTree = "<group>"; };
 		2F372667175B03A3007B3B23 /* UFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFUser.m; path = Models/UFUser.m; sourceTree = "<group>"; };
 		2F372669175B03B0007B3B23 /* UFProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFProduct.h; path = Models/UFProduct.h; sourceTree = "<group>"; };
@@ -244,8 +257,6 @@
 		2F5D3AA0175AA3EA00005E82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2F5D3AA8175AA3EA00005E82 /* UFAppDelegate.h */,
-				2F5D3AA9175AA3EA00005E82 /* UFAppDelegate.m */,
 				2F5D3AA1175AA3EA00005E82 /* UrbanFruitly-Info.plist */,
 				2F5D3AA2175AA3EA00005E82 /* InfoPlist.strings */,
 				2F5D3AA5175AA3EA00005E82 /* main.m */,
@@ -276,6 +287,8 @@
 		2F5D3AC1175AB35C00005E82 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F5D3AA8175AA3EA00005E82 /* UFAppDelegate.h */,
+				2F5D3AA9175AA3EA00005E82 /* UFAppDelegate.m */,
 				2F5D3AC2175AB65100005E82 /* UFMainViewController.h */,
 				2F5D3AC3175AB65100005E82 /* UFMainViewController.m */,
 				2F5D3ADA175ABC7E00005E82 /* UFPostTableViewController.h */,
@@ -286,6 +299,15 @@
 				04039B4D175B15A10094E4A7 /* UFProductMapViewController.m */,
 				042B19E9175BC40B00F87B46 /* UFProductDetailViewController.h */,
 				042B19EA175BC40B00F87B46 /* UFProductDetailViewController.m */,
+				04AD1364175E9E3600B00421 /* UFSignupRequestViewController.h */,
+				04AD1365175E9E3600B00421 /* UFSignupRequestViewController.m */,
+				04AD1367175EA22A00B00421 /* UFAccountRequiredTableViewController.h */,
+				04AD1368175EA22A00B00421 /* UFAccountRequiredTableViewController.m */,
+				04AD136A175EA6C600B00421 /* UFMyPostingsTableViewController.h */,
+				04AD136B175EA6C600B00421 /* UFMyPostingsTableViewController.m */,
+				04AD136D175EAE1F00B00421 /* UFProductSelectionTableViewController.h */,
+				04AD136E175EAE1F00B00421 /* UFProductSelectionTableViewController.m */,
+				04AD1370175EAF8900B00421 /* UFProductSelectionTableViewControllerDelegate.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -372,6 +394,10 @@
 				042B19EB175BC40C00F87B46 /* UFProductDetailViewController.m in Sources */,
 				042B19EE175BDDE500F87B46 /* UKImage.m in Sources */,
 				042B19F1175BDECD00F87B46 /* MBProgressHUD.m in Sources */,
+				04AD1366175E9E3600B00421 /* UFSignupRequestViewController.m in Sources */,
+				04AD1369175EA22A00B00421 /* UFAccountRequiredTableViewController.m in Sources */,
+				04AD136C175EA6C600B00421 /* UFMyPostingsTableViewController.m in Sources */,
+				04AD136F175EAE2000B00421 /* UFProductSelectionTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

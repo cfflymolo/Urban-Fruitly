@@ -32,8 +32,14 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    UFProductMapViewController* vc = segue.destinationViewController;
-    [vc setType:self.typeField.text andDistance:self.distField.text];                                       
+    if([[segue identifier] isEqualToString:@""]){
+        UFProductMapViewController* vc = segue.destinationViewController;
+        [vc setType:self.typeField.text andDistance:self.distField.text];
+    }
+    else if([segue.identifier isEqualToString:@"ChooseProduceType"]){
+        UFProductSelectionTableViewController* vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
 }
 
 #pragma mark - UITextFieldDelegate Methods
@@ -49,6 +55,12 @@
     
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - UFProductSelectionTableViewControllerDelegate methods
+
+- (void)productTypeSelected:(NSString *)type{
+    self.typeField.text = type;
 }
 
 

@@ -19,15 +19,13 @@
     MBProgressHUD* progressHud;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
-@property (weak, nonatomic) IBOutlet UITextField *typeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *productTypeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @property (weak, nonatomic) IBOutlet UITextField *quantityTextField;
-@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+
 @property (weak, nonatomic) IBOutlet UITextField *expirationTextField;
 
-@property (strong, nonatomic) NSArray *productTypes;
 @property (strong, nonatomic) NSArray *expirationDurations;
-@property (strong, nonatomic) UIPickerView *typePickerView;
 @property (strong, nonatomic) UIPickerView *expirationPickerView;
 @end
 
@@ -39,26 +37,19 @@
     
     originalPickerFrame = CGRectMake(0, UIScreen.mainScreen.bounds.size.height, UIScreen.mainScreen.bounds.size.width ,TYPE_PICKERVIEW_HEIGHT);
     
-    self.typePickerView = [[UIPickerView alloc] initWithFrame:originalPickerFrame];
     self.expirationPickerView = [[UIPickerView alloc] initWithFrame:originalPickerFrame];
-    
-    self.typePickerView.dataSource = self.expirationPickerView.dataSource = self;
-    self.typePickerView.delegate = self.expirationPickerView.delegate = self;
-    
+    self.expirationPickerView.delegate = self;
     
     UIView* topView = [[[[UIApplication sharedApplication] keyWindow] subviews] lastObject];
-    [topView addSubview:self.typePickerView];
     [topView addSubview:self.expirationPickerView];
     
-    self.productTypes = @[@"Apple", @"Oranges", @"Avacado"];
-    self.expirationDurations = @[@"1 Week", @"2 Weeks", @"3 Weeks"];
-    self.typeTextField.enabled = NO;
+    self.expirationDurations = @[@"1 Week", @"2 Weeks", @"3 Weeks",@"4 Weeks", @"5 Weeks", @"6 Weeks",@"7 Weeks", @"8 Weeks"];
     self.expirationTextField.enabled = NO;
     
     self.priceTextField.delegate = self;
     self.quantityTextField.delegate = self;
-    self.descriptionTextField.delegate = self;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -66,12 +57,12 @@
     if(indexPath.section==0){
 
     }
-    else if (indexPath.section == 1 && indexPath.row == 0) {
-        [UIView animateWithDuration:0.5 animations:^{
-            CGRect frame = self.typePickerView.frame;
-            self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
-        }];
-    }
+//    else if (indexPath.section == 1 && indexPath.row == 0) {
+//        [UIView animateWithDuration:0.5 animations:^{
+//            CGRect frame = self.typePickerView.frame;
+//            self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
+//        }];
+//    }
     else if (indexPath.section == 1 && indexPath.row == 2) {
         [UIView animateWithDuration:0.5 animations:^{
             CGRect frame = self.expirationPickerView.frame;
@@ -100,17 +91,13 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    if(pickerView == self.typePickerView)
-        return self.productTypes.count;
     return self.expirationDurations.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if(pickerView == self.typePickerView)
-        return self.productTypes [row];
-    
-    return self.expirationDurations [row];
+
+    return self.expirationDurations[row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -119,11 +106,7 @@
         pickerView.frame = originalPickerFrame;
     }];
     
-    if(pickerView == self.typePickerView)
-        self.typeTextField.text = self.productTypes [row];
-    else{
-        self.expirationTextField.text = self.expirationDurations[row];
-    }
+    self.expirationTextField.text = self.expirationDurations[row];
 }
 
 #pragma mark - UITextFieldDelegate Methods
@@ -175,7 +158,27 @@
     self.productImageView.image = smallImage;
 }
 
-///Cloud
+
+#pragma mark - Storyboard methods
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"Segue Id: %@",segue.identifier);
+    if([segue.identifier isEqualToString:@"ChooseProduceType"]){
+        UFProductSelectionTableViewController* vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
+
+
+#pragma mark UFProductSelectionTableViewControllerDelegate methods
+
+- (void)productTypeSelected:(NSString *)type{
+    self.productTypeTextField.text = type;
+}
+
+
+
+#pragma mark - Cloud Methods
 
 - (void) saveProfileToTheCloud{
     
@@ -228,7 +231,7 @@
     [prodObj setObject:geoPoint forKey:@"location"];
     [prodObj setObject:quantity forKey:@"quantity"];
     [prodObj setObject:price forKey:@"price"];
-    [prodObj setObject:self.typeTextField.text forKey:@"type"];
+    [prodObj setObject:self.productTypeTextField.text forKey:@"type"];
     [prodObj setObject:[PFUser currentUser] forKey:@"user"];
     
     [prodObj saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UFProductSelectionTableViewController.h"
 
-@interface UFSearchTableViewController : UITableViewController <UITextFieldDelegate>
+@interface UFSearchTableViewController : UITableViewController <UITextFieldDelegate,UFProductSelectionTableViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *typeField;
 @property (weak, nonatomic) IBOutlet UITextField *distField;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
