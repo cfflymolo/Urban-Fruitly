@@ -18,6 +18,7 @@
                         <segue destination="DFs-hZ-yRD" kind="relationship" relationship="viewControllers" id="rkU-NJ-8YV"/>
                         <segue destination="B1i-92-6vp" kind="relationship" relationship="viewControllers" id="lnL-W6-q68"/>
                         <segue destination="W3B-ea-A4l" kind="relationship" relationship="viewControllers" id="JlY-dU-sac"/>
+                        <segue destination="tga-8V-blM" kind="relationship" relationship="viewControllers" id="U29-3T-kVx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXd-XP-XSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1002,7 +1003,7 @@
         <scene sceneID="oHW-UV-Kpm">
             <objects>
                 <navigationController id="DFs-hZ-yRD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="2zv-44-rZ8"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="06-magnify.png" id="2zv-44-rZ8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nOd-a1-04J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1021,7 +1022,7 @@
         <scene sceneID="0CI-5H-lYh">
             <objects>
                 <navigationController id="B1i-92-6vp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" id="mil-GM-pJH"/>
+                    <tabBarItem key="tabBarItem" title="Post" image="168-upload-photo-2.png" id="mil-GM-pJH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ktd-Xm-14W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1073,7 +1074,7 @@
         <scene sceneID="b36-Qf-1Cn">
             <objects>
                 <navigationController id="W3B-ea-A4l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Postings" id="9CX-vI-xqP"/>
+                    <tabBarItem key="tabBarItem" title="My Postings" image="259-list.png" id="9CX-vI-xqP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nj6-kY-QVA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1087,6 +1088,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwl-uO-1TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1388" y="708"/>
+        </scene>
+        <!--View Controller - My Profile-->
+        <scene sceneID="ywg-uP-NOT">
+            <objects>
+                <viewController id="tga-8V-blM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z49-n1-5Ya">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="123-id-card.png" id="ejh-US-Kta"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdL-hc-OoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1395" y="1586"/>
         </scene>
         <!--Product Map View Controller-->
         <scene sceneID="vs5-xl-ZyV">
@@ -1168,9 +1184,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzQ-Ma-SCX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1379" y="1646"/>
+            <point key="canvasLocation" x="-1319" y="2766"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="06-magnify.png" width="24" height="24"/>
+        <image name="123-id-card.png" width="24" height="17"/>
+        <image name="168-upload-photo-2.png" width="22" height="25"/>
+        <image name="259-list.png" width="20" height="14"/>
+    </resources>
     <classes>
         <class className="UFAccountRequiredTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UFAccountRequiredTableViewController.h"/>

@@ -29,6 +29,14 @@
 		04AD1369175EA22A00B00421 /* UFAccountRequiredTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD1368175EA22A00B00421 /* UFAccountRequiredTableViewController.m */; };
 		04AD136C175EA6C600B00421 /* UFMyPostingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD136B175EA6C600B00421 /* UFMyPostingsTableViewController.m */; };
 		04AD136F175EAE2000B00421 /* UFProductSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD136E175EAE1F00B00421 /* UFProductSelectionTableViewController.m */; };
+		04AD1373175EC23700B00421 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD1371175EC23700B00421 /* 06-magnify.png */; };
+		04AD1374175EC23700B00421 /* 06-magnify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD1372175EC23700B00421 /* 06-magnify@2x.png */; };
+		04AD1377175EC29200B00421 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD1375175EC29200B00421 /* 123-id-card.png */; };
+		04AD1378175EC29200B00421 /* 123-id-card@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD1376175EC29200B00421 /* 123-id-card@2x.png */; };
+		04AD137B175EC2C800B00421 /* 168-upload-photo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD1379175EC2C800B00421 /* 168-upload-photo-2.png */; };
+		04AD137C175EC2C800B00421 /* 168-upload-photo-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD137A175EC2C800B00421 /* 168-upload-photo-2@2x.png */; };
+		04AD137F175EC30F00B00421 /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD137D175EC30F00B00421 /* 259-list.png */; };
+		04AD1380175EC30F00B00421 /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD137E175EC30F00B00421 /* 259-list@2x.png */; };
 		2F372668175B03A3007B3B23 /* UFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F372667175B03A3007B3B23 /* UFUser.m */; };
 		2F37266B175B03B0007B3B23 /* UFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266A175B03B0007B3B23 /* UFProduct.m */; };
 		2F37266E175B03B8007B3B23 /* UFTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F37266D175B03B8007B3B23 /* UFTransaction.m */; };
@@ -88,6 +96,14 @@
 		04AD136D175EAE1F00B00421 /* UFProductSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFProductSelectionTableViewController.h; sourceTree = "<group>"; };
 		04AD136E175EAE1F00B00421 /* UFProductSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFProductSelectionTableViewController.m; sourceTree = "<group>"; };
 		04AD1370175EAF8900B00421 /* UFProductSelectionTableViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UFProductSelectionTableViewControllerDelegate.h; sourceTree = "<group>"; };
+		04AD1371175EC23700B00421 /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
+		04AD1372175EC23700B00421 /* 06-magnify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x.png"; sourceTree = "<group>"; };
+		04AD1375175EC29200B00421 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
+		04AD1376175EC29200B00421 /* 123-id-card@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card@2x.png"; sourceTree = "<group>"; };
+		04AD1379175EC2C800B00421 /* 168-upload-photo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "168-upload-photo-2.png"; sourceTree = "<group>"; };
+		04AD137A175EC2C800B00421 /* 168-upload-photo-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "168-upload-photo-2@2x.png"; sourceTree = "<group>"; };
+		04AD137D175EC30F00B00421 /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
+		04AD137E175EC30F00B00421 /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
 		2F372666175B03A3007B3B23 /* UFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFUser.h; path = Models/UFUser.h; sourceTree = "<group>"; };
 		2F372667175B03A3007B3B23 /* UFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UFUser.m; path = Models/UFUser.m; sourceTree = "<group>"; };
 		2F372669175B03B0007B3B23 /* UFProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFProduct.h; path = Models/UFProduct.h; sourceTree = "<group>"; };
@@ -162,6 +178,14 @@
 		04AD1362175E9A8D00B00421 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04AD137D175EC30F00B00421 /* 259-list.png */,
+				04AD137E175EC30F00B00421 /* 259-list@2x.png */,
+				04AD1379175EC2C800B00421 /* 168-upload-photo-2.png */,
+				04AD137A175EC2C800B00421 /* 168-upload-photo-2@2x.png */,
+				04AD1375175EC29200B00421 /* 123-id-card.png */,
+				04AD1376175EC29200B00421 /* 123-id-card@2x.png */,
+				04AD1371175EC23700B00421 /* 06-magnify.png */,
+				04AD1372175EC23700B00421 /* 06-magnify@2x.png */,
 				042B19F8175BFB2E00F87B46 /* Default.png */,
 				042B19F6175BFAEC00F87B46 /* Default@2x.png */,
 				042B19F4175BF9AE00F87B46 /* UrbanFruitlyTableBG.png */,
@@ -372,6 +396,14 @@
 				042B19F5175BF9AE00F87B46 /* UrbanFruitlyTableBG.png in Resources */,
 				042B19F7175BFAEC00F87B46 /* Default@2x.png in Resources */,
 				042B19F9175BFB2E00F87B46 /* Default.png in Resources */,
+				04AD1373175EC23700B00421 /* 06-magnify.png in Resources */,
+				04AD1374175EC23700B00421 /* 06-magnify@2x.png in Resources */,
+				04AD1377175EC29200B00421 /* 123-id-card.png in Resources */,
+				04AD1378175EC29200B00421 /* 123-id-card@2x.png in Resources */,
+				04AD137B175EC2C800B00421 /* 168-upload-photo-2.png in Resources */,
+				04AD137C175EC2C800B00421 /* 168-upload-photo-2@2x.png in Resources */,
+				04AD137F175EC30F00B00421 /* 259-list.png in Resources */,
+				04AD1380175EC30F00B00421 /* 259-list@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
