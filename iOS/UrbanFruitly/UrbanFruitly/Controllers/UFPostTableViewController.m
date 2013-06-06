@@ -20,6 +20,7 @@
     MBProgressHUD* progressHud;
     BOOL useGPS;
     BOOL descriptionKeyboardVisible;
+    PFGeoPoint* myGeoLocation;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 @property (weak, nonatomic) IBOutlet UITextField *productTypeTextField;
@@ -48,6 +49,7 @@
     [super viewDidLoad];
     useGPS = NO;
     descriptionKeyboardVisible = NO;
+    myGeoLocation = nil;
     
     originalPickerFrame = CGRectMake(0, UIScreen.mainScreen.bounds.size.height, UIScreen.mainScreen.bounds.size.width ,TYPE_PICKERVIEW_HEIGHT);
     
@@ -121,7 +123,6 @@
 #pragma mark -
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    
     if(section==2){
         // Create label with section title
         UILabel *label = [[UILabel alloc] init];
@@ -150,9 +151,6 @@
         [self takePicture];
     }
 }
-
-
-
 
 #pragma mark - PickerView Delegate methods
 
@@ -217,22 +215,22 @@
     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = (id)self;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentModalViewController:imagePicker animated:YES];
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 - (void)pickPhotoFromAlbum{
     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = (id)self;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    [self presentModalViewController:imagePicker animated:YES];
+    [self presentViewController:imagePicker animated:YES completion:nil];    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-    [picker dismissModalViewControllerAnimated:YES];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) imagePickerController:(UIImagePickerController*) picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    [picker dismissModalViewControllerAnimated:YES];
+    [picker dismissViewControllerAnimated:YES completion:nil];
     
     UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if(image==nil)
@@ -267,23 +265,133 @@
 
 #pragma mark - Cloud Methods
 
-- (void) saveProfileToTheCloud{
+- (BOOL) validateForm{
+    if(self.productImageView.image==nil){
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle: @"Form Error"
+                                  message: @"Please provide photo"
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    
+    //check location
+    if(useGPS==NO && (self.addressTextField.text == nil || self.addressTextField.text.length == 0) ){
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle: @"Form Error"
+                                  message: @"Please enter Valid Address (Street Number and Name,City,Zip)"
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    
+    if(self.productTypeTextField.text == nil || self.productTypeTextField.text.length==0){
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle: @"Form Error"
+                                  message: @"Please select the fruit type"
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    NSString* price  = self.priceTextField.text;
+    if(price==nil){
+        price = @"0";
+    }
+    NSScanner* priceScanner = [NSScanner scannerWithString:price];
+    if (!([priceScanner scanFloat:nil] || [priceScanner scanInt:nil]))
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle: @"Form Error"
+                                  message: @"Please enter valid price"
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    
+    if(self.expirationTextField.text==nil || self.expirationTextField.text.length==0){
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle: @"Form Error"
+                                  message: @"Please enter expiration duration"
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    
+    NSString* quantity  = self.quantityTextField.text;
+
+    NSScanner* quantityScanner = [NSScanner scannerWithString:quantity];
+    if ([quantityScanner scanInt:nil]==NO)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle: @"Form Error"
+                                  message: @"Please enter valid quantity"
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    return YES;
+}
+
+- (IBAction)postData:(id)sender {
+    if([self validateForm]){
+        progressHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        if(useGPS){
+            [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+                if (!error) {
+                    myGeoLocation = geoPoint;
+                    [self postItemToTheCloud];
+                }
+            }];
+        }
+        else{
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            [geocoder geocodeAddressString:self.addressTextField.text completionHandler:^(NSArray* placemarks, NSError* error){
+                if(!error){
+                    CLPlacemark* placemark = placemarks[0];
+                    myGeoLocation = [PFGeoPoint geoPointWithLocation:placemark.location];
+                    NSLog(@"GeoCoded Location : %f %f",myGeoLocation.latitude,myGeoLocation.longitude);
+                    [self postItemToTheCloud];
+                }
+                else{
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    UIAlertView *alertView = [[UIAlertView alloc]
+                                              initWithTitle: @"Problem Posting"
+                                              message: @"Address not found. Please enter complete address or try later"
+                                              delegate: nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+                    [alertView show];
+                    return ;
+                }
+            }];
+        }
+    }
+}
+
+
+- (void) postItemToTheCloud{
     
     //set Image
     NSData *imageData = UIImageJPEGRepresentation(self.productImageView.image, 0.05f);
     PFFile *imageFile = [PFFile fileWithName:@"ProductImage.jpg" data:imageData];
-    
-    progressHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
     //Save Image object
     // Save PFFile
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-
-            [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
-                if (!error) {
-                    [self saveProfileToTheCloudAfterImageFileUpload:imageFile withLocation:geoPoint];
-                }
-            }];
+            [self postItemToTheCloudAfterImageFileUpload:imageFile withLocation:myGeoLocation];
         }
         else{
             // Log details of the failure
@@ -295,7 +403,7 @@
     }];
 }
 
-- (void) saveProfileToTheCloudAfterImageFileUpload:(PFFile*)imageFile withLocation:(PFGeoPoint*)geoPoint{
+- (void) postItemToTheCloudAfterImageFileUpload:(PFFile*)imageFile withLocation:(PFGeoPoint*)geoPoint{
     PFUser* currentUser = [PFUser currentUser];
     if(!currentUser)
         return;
@@ -306,8 +414,8 @@
     [prodObj setObject:imageFile forKey:@"image"];
     
     // Set the access control list to current user for security purposes
-    //prodObj.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-    //[prodObj.ACL setPublicReadAccess:YES];
+    prodObj.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    [prodObj.ACL setPublicReadAccess:YES];
     
     //Set values in the object
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
@@ -326,6 +434,7 @@
         if(succeeded){
        //     NSLog(@"Obect ID: %@",profileObj.objectId);
             //  [UserDataModel setProfileObjectId:profileObj.objectId];
+            [self.navigationController popViewControllerAnimated:YES];
         }
         else{
             //handle error
@@ -341,10 +450,6 @@
 }
 
 
-
-- (IBAction)postData:(id)sender {
-    [self saveProfileToTheCloud];
-}
 
 - (IBAction)selectPhotoButtonTapped:(id)sender {
     NSString *actionSheetTitle = @"Select Photo"; //Action Sheet Title

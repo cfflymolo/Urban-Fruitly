@@ -49,12 +49,14 @@
 - (void) setType:(NSString*)type andDistance:(NSString*)distance{
     mytype = type;
     mydistance = distance;
+    NSLog(@"type : %@ , dist : %@ km",mytype,mydistance);
 }
 
 - (void) getResults{
     [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
         if (!error) {
             double _dist = [mydistance doubleValue];
+            NSLog(@"Search Distance: %f",_dist);
             PFQuery *query = [PFQuery queryWithClassName:@"Product"];
             [query whereKey:@"location" nearGeoPoint:geoPoint withinKilometers:_dist];
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -78,6 +80,9 @@
                     
                     myAppleSymbol = [AGSSimpleMarkerSymbol simpleMarkerSymbol];
                     myAppleSymbol.color = [UIColor redColor];
+                }
+                else{
+                    NSLog(@"Error loading results: %@",error.description);
                 }
             }];
         }

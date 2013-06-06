@@ -16,14 +16,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="DFs-hZ-yRD" kind="relationship" relationship="viewControllers" id="rkU-NJ-8YV"/>
-                        <segue destination="B1i-92-6vp" kind="relationship" relationship="viewControllers" id="lnL-W6-q68"/>
                         <segue destination="W3B-ea-A4l" kind="relationship" relationship="viewControllers" id="JlY-dU-sac"/>
                         <segue destination="tga-8V-blM" kind="relationship" relationship="viewControllers" id="U29-3T-kVx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXd-XP-XSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1928" y="-17"/>
+            <point key="canvasLocation" x="-2352" y="107"/>
         </scene>
         <!--Post Table View Controller - Post Your Produce-->
         <scene sceneID="hkK-M8-021">
@@ -256,14 +255,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNh-r1-uYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-862" y="-17"/>
+            <point key="canvasLocation" x="-282" y="316"/>
         </scene>
         <!--Product Selection Table View Controller - Select Produce-->
         <scene sceneID="gCL-Rc-6HP">
             <objects>
                 <tableViewController id="KMf-BF-J2z" customClass="UFProductSelectionTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Rxo-uZ-SeA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -875,7 +874,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1p-KJ-ynH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-173" y="-61"/>
+            <point key="canvasLocation" x="275" y="-245"/>
         </scene>
         <!--Product Detail View Controller - Type-->
         <scene sceneID="jzH-LO-PiM">
@@ -940,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iH-UU-GxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154" y="732"/>
+            <point key="canvasLocation" x="-282" y="1106"/>
         </scene>
         <!--Search Table View Controller - Find-->
         <scene sceneID="hKr-e9-eSN">
@@ -1011,7 +1010,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="luW-z3-cXG" kind="push" id="6pv-w6-2qT"/>
+                                                        <segue destination="luW-z3-cXG" kind="push" identifier="Search" id="6pv-w6-2qT"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1057,26 +1056,7 @@
             </objects>
             <point key="canvasLocation" x="-1388" y="-735"/>
         </scene>
-        <!--Navigation Controller - Post-->
-        <scene sceneID="0CI-5H-lYh">
-            <objects>
-                <navigationController id="B1i-92-6vp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" image="168-upload-photo-2.png" id="mil-GM-pJH"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ktd-Xm-14W">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4xI-PG-0mi" kind="relationship" relationship="rootViewController" id="iTe-8b-yfk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tQb-db-bvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1388" y="-17"/>
-        </scene>
-        <!--My Postings Table View Controller - My Postings-->
+        <!--My Postings Table View Controller - Title-->
         <scene sceneID="sI8-GT-211">
             <objects>
                 <tableViewController id="g3J-lH-UKT" customClass="UFMyPostingsTableViewController" sceneMemberID="viewController">
@@ -1085,16 +1065,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="g6C-ta-Pwp">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="P8y-MN-r4b" detailTextLabel="D5Y-hV-nnH" imageView="6FI-LJ-evf" style="IBUITableViewCellStyleSubtitle" id="g6C-ta-Pwp">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P8y-MN-r4b">
+                                            <rect key="frame" x="67" y="2" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D5Y-hV-nnH">
+                                            <rect key="frame" x="67" y="24" width="36" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="apple_002.jpg" id="6FI-LJ-evf">
+                                            <rect key="frame" x="0.0" y="0.0" width="57" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="1At-Fm-5Pn" kind="push" id="19r-Tt-N5n"/>
+                                    <segue destination="1At-Fm-5Pn" kind="push" trigger="accessoryAction" id="2Xi-ux-57e"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1103,11 +1103,18 @@
                             <outlet property="delegate" destination="g3J-lH-UKT" id="3Ky-9w-hFg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Postings" id="7Ze-p7-atq"/>
+                    <navigationItem key="navigationItem" title="Title" id="sw7-K2-Ode">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Dxz-Xn-ffH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kus-C6-U1H">
+                            <connections>
+                                <segue destination="4xI-PG-0mi" kind="push" id="CHY-oc-Ybs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ez-Ls-5Z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-862" y="708"/>
+            <point key="canvasLocation" x="-862" y="316"/>
         </scene>
         <!--Navigation Controller - My Postings-->
         <scene sceneID="b36-Qf-1Cn">
@@ -1126,7 +1133,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwl-uO-1TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388" y="708"/>
+            <point key="canvasLocation" x="-1444" y="316"/>
         </scene>
         <!--View Controller - My Profile-->
         <scene sceneID="ywg-uP-NOT">
@@ -1229,78 +1236,15 @@
     <resources>
         <image name="06-magnify.png" width="24" height="24"/>
         <image name="123-id-card.png" width="24" height="17"/>
-        <image name="168-upload-photo-2.png" width="22" height="25"/>
         <image name="259-list.png" width="20" height="14"/>
+        <image name="apple_002.jpg" width="1600" height="1200"/>
     </resources>
-    <classes>
-        <class className="UFAccountRequiredTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFAccountRequiredTableViewController.h"/>
-        </class>
-        <class className="UFMainViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMainViewController.h"/>
-        </class>
-        <class className="UFMyPostingsTableViewController" superclassName="UFAccountRequiredTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMyPostingsTableViewController.h"/>
-        </class>
-        <class className="UFPostTableViewController" superclassName="UFAccountRequiredTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="gpsLocationButtonTapped:"/>
-                <relationship kind="action" name="postData:"/>
-                <relationship kind="action" name="selectPhotoButtonTapped:"/>
-                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="expirationTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gpsLocationButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="postButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="productImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="productTypeTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="quantityTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="selectPhotoButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="UFProductDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="quantityLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="vendorNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UFProductMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductMapViewController.h"/>
-        </class>
-        <class className="UFProductSelectionTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductSelectionTableViewController.h"/>
-        </class>
-        <class className="UFSearchTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="distField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="typeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UFSignupRequestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSignupRequestViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="login:"/>
-                <relationship kind="action" name="signup:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ri5-7z-R4I"/>
+        <segue reference="LHk-le-zbN"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -54,7 +54,7 @@
 }
 
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController{
-    UITabBarController* tabVC =  [UIApplication sharedApplication].keyWindow.rootViewController;
+    UITabBarController* tabVC =  (UITabBarController*)[UIApplication sharedApplication].keyWindow.rootViewController;
     tabVC.selectedIndex = 0;
     [self dismissViewControllerAnimated:YES completion:nil];
 }

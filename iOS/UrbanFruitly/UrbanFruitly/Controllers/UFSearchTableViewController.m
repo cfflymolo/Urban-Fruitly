@@ -40,7 +40,7 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([[segue identifier] isEqualToString:@""]){
+    if([[segue identifier] isEqualToString:@"Search"]){
         UFProductMapViewController* vc = segue.destinationViewController;
         [vc setType:self.typeField.text andDistance:self.distField.text];
     }
