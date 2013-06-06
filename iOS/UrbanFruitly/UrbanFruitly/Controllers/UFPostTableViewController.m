@@ -19,6 +19,7 @@
     CGRect originalPickerFrame;
     MBProgressHUD* progressHud;
     BOOL useGPS;
+    BOOL descriptionKeyboardVisible;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 @property (weak, nonatomic) IBOutlet UITextField *productTypeTextField;
@@ -33,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *postButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *selectPhotoButton;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 
 @property (strong, nonatomic) NSArray *expirationDurations;
@@ -44,7 +46,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    useGPS = false;
+    useGPS = NO;
+    descriptionKeyboardVisible = NO;
     
     originalPickerFrame = CGRectMake(0, UIScreen.mainScreen.bounds.size.height, UIScreen.mainScreen.bounds.size.width ,TYPE_PICKERVIEW_HEIGHT);
     
@@ -64,7 +67,18 @@
     [self setAppearance];
     
     self.addressTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-
+    self.descriptionTextView.delegate = self;
+    //add tap gesture to table view
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tableViewTapped:)];
+    [self.tableView addGestureRecognizer:tapGesture];
+    
+    UITapGestureRecognizer* pickerViewTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pickerViewTapped:)];
+    [self.expirationPickerView addGestureRecognizer:pickerViewTapGesture];
+    
+    //
+    NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:2];
+    UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:index];
+    self.descriptionTextView.backgroundColor = cell.backgroundColor;
 }
 
 
@@ -80,13 +94,50 @@
 //            self.typePickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
 //        }];
 //    }
+
+
+}
+
+#pragma mark - Gesture handlers
+
+- (void) tableViewTapped:(UITapGestureRecognizer*)recognizer{
+    // if(descriptionKeyboardVisible)
+    [self.descriptionTextView resignFirstResponder];
+    
+    CGPoint tapLocation = [recognizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tapLocation];
+
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"ChooseProduceType" sender:nil];
+    }
     else if (indexPath.section == 1 && indexPath.row == 3) {
         [UIView animateWithDuration:0.5 animations:^{
             CGRect frame = originalPickerFrame;
             self.expirationPickerView.frame = CGRectMake(frame.origin.x, frame.origin.y-TYPE_PICKERVIEW_HEIGHT, UIScreen.mainScreen.bounds.size.width, TYPE_PICKERVIEW_HEIGHT);
         }];
     }
+}
 
+#pragma mark -
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    if(section==2){
+        // Create label with section title
+        UILabel *label = [[UILabel alloc] init];
+        label.frame = CGRectMake(10, 0, 284, 23);
+        label.textColor = [UIColor darkGrayColor];
+        label.font = [UIFont fontWithName:@"Georgia" size:16];
+        label.text = @"Description";
+        label.backgroundColor = [UIColor clearColor];
+        
+        // Create header view and add label as a subview
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+        [view addSubview:label];
+        
+        return view;
+    }
+    return nil;
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -100,6 +151,10 @@
     }
 }
 
+
+
+
+#pragma mark - PickerView Delegate methods
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -119,11 +174,13 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    [UIView animateWithDuration:0.5f animations:^{
-        pickerView.frame = originalPickerFrame;
-    }];
-    
     self.expirationTextField.text = self.expirationDurations[row];
+}
+
+- (void)pickerViewTapped:(UITapGestureRecognizer*)recognizer{
+    [UIView animateWithDuration:0.5f animations:^{
+        self.expirationPickerView.frame = originalPickerFrame;
+    }];
 }
 
 #pragma mark - UITextFieldDelegate Methods
@@ -141,6 +198,18 @@
     return YES;
 }
 
+#pragma mark - UITextViewDelegate Methods
+
+
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+    descriptionKeyboardVisible = YES;
+    UITableViewCell *cell = (UITableViewCell*) [[textView superview] superview];
+    [(UITableView*)self.view scrollToRowAtIndexPath:[(UITableView*)self.view indexPathForCell:cell] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView{
+    descriptionKeyboardVisible = NO;
+}
 
 #pragma mark - Photo Picker Methods
 
@@ -323,5 +392,6 @@
     
     
 }
+
 
 @end

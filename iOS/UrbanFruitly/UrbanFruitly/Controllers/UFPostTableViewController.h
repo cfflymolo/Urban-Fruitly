@@ -10,7 +10,7 @@
 #import "UFAccountRequiredTableViewController.h"
 #import "UFProductSelectionTableViewController.h"
 
-@interface UFPostTableViewController : UFAccountRequiredTableViewController <UITextFieldDelegate,UIActionSheetDelegate,UFProductSelectionTableViewControllerDelegate>
+@interface UFPostTableViewController : UFAccountRequiredTableViewController <UITextFieldDelegate,UIActionSheetDelegate,UFProductSelectionTableViewControllerDelegate,UITextViewDelegate>
 
 
 
