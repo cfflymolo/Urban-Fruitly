@@ -214,12 +214,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s9x-gG-SBv">
                                                     <rect key="frame" x="0.0" y="-1" width="300" height="44"/>
                                                     <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                                    <state key="normal" title="Post">
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Post ">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="highlighted">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="postData:" destination="4xI-PG-0mi" eventType="touchUpInside" id="ojP-09-D2M"/>
@@ -1233,6 +1231,69 @@
         <image name="123-id-card.png" width="24" height="17"/>
         <image name="259-list.png" width="20" height="14"/>
     </resources>
+    <classes>
+        <class className="UFAccountRequiredTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFAccountRequiredTableViewController.h"/>
+        </class>
+        <class className="UFMainViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMainViewController.h"/>
+        </class>
+        <class className="UFMyPostingsTableViewController" superclassName="UFAccountRequiredTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMyPostingsTableViewController.h"/>
+        </class>
+        <class className="UFPostTableViewController" superclassName="UFAccountRequiredTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="gpsLocationButtonTapped:"/>
+                <relationship kind="action" name="postData:"/>
+                <relationship kind="action" name="selectPhotoButtonTapped:"/>
+                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="expirationTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gpsLocationButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="postButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="productImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="productTypeTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="quantityTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="selectPhotoButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="UFProductDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="quantityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vendorNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UFProductMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductMapViewController.h"/>
+        </class>
+        <class className="UFProductSelectionTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductSelectionTableViewController.h"/>
+        </class>
+        <class className="UFSearchTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="distField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="typeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="UFSignupRequestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSignupRequestViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="login:"/>
+                <relationship kind="action" name="signup:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

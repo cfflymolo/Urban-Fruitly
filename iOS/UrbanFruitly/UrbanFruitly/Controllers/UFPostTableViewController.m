@@ -82,6 +82,26 @@
     NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:2];
     UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:index];
     self.descriptionTextView.backgroundColor = cell.backgroundColor;
+    self.productImageView.contentMode = UIViewContentModeScaleAspectFit;
+}
+
+- (void)updateUIForProduct:(UFProduct*)product{
+    if(!product)
+        return;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(product.image){
+            self.productImageView.image = product.image;
+        }
+        self.productTypeTextField.text = product.productType;
+        self.priceTextField.text = [NSString stringWithFormat:@"%f",product.price.floatValue];
+        self.quantityTextField.text = [NSString stringWithFormat:@"%d",product.quantity.intValue];
+        self.descriptionTextView.text = product.description;
+        self.postButton.titleLabel.text = @"Update";
+        
+        self.navigationItem.title = @"Update Post";
+    });
+
 }
 
 
@@ -241,7 +261,6 @@
     UIImage* smallImage = [image scaleImageToSize:smallSize];
     //set image
     self.productImageView.image = smallImage;
-    self.productImageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 

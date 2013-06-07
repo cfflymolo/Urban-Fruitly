@@ -19,4 +19,7 @@
 - (IBAction)selectPhotoButtonTapped:(id)sender;
 - (IBAction)gpsLocationButtonTapped:(id)sender;
 
+- (void)updateUIForProduct:(UFProduct*)product;
+//-(void) setUpdateMode;
+
 @end
