@@ -11,5 +11,5 @@ Information Goes Here
 * Shokoufei Mizaraei
 * Robert Colin
 * Luis Campos
-* Kal
+* Kalpesh Solanki (http://www.solankiapps.com)
 * Allen Scheinhaus

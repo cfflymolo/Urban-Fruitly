@@ -98,6 +98,7 @@
         self.quantityTextField.text = [NSString stringWithFormat:@"%d",product.quantity.intValue];
         self.descriptionTextView.text = product.description;
         self.postButton.titleLabel.text = @"Update";
+        [self.postButton setTitle:@"Update" forState:UIControlStateNormal];
         
         self.navigationItem.title = @"Update Post";
     });

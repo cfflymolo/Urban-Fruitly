@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-2352" y="107"/>
         </scene>
-        <!--Post Table View Controller - Post Your Produce-->
+        <!--Post Table View Controller - New Post-->
         <scene sceneID="hkK-M8-021">
             <objects>
                 <tableViewController id="4xI-PG-0mi" customClass="UFPostTableViewController" sceneMemberID="viewController">
@@ -236,7 +236,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Post Your Produce" id="DZy-Va-4kQ"/>
+                    <navigationItem key="navigationItem" title="New Post" id="DZy-Va-4kQ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="EPs-SO-WKc" id="o1U-Ou-EZO"/>
@@ -1054,7 +1054,7 @@
             </objects>
             <point key="canvasLocation" x="-1388" y="-735"/>
         </scene>
-        <!--My Postings Table View Controller - My Postings-->
+        <!--My Postings Table View Controller - Postings-->
         <scene sceneID="sI8-GT-211">
             <objects>
                 <tableViewController id="g3J-lH-UKT" customClass="UFMyPostingsTableViewController" sceneMemberID="viewController">
@@ -1097,7 +1097,7 @@
                             <outlet property="delegate" destination="g3J-lH-UKT" id="3Ky-9w-hFg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Postings" id="sw7-K2-Ode">
+                    <navigationItem key="navigationItem" title="Postings" id="sw7-K2-Ode">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kus-C6-U1H">
                             <connections>
                                 <segue destination="4xI-PG-0mi" kind="push" identifier="NewProduct" id="CHY-oc-Ybs"/>
@@ -1279,7 +1279,6 @@
         <class className="UFSearchTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
             <relationships>
-                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="distField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
