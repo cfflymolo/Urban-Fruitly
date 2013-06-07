@@ -9,6 +9,7 @@
 #import "UFMyPostingsTableViewController.h"
 #import "MBProgressHUD.h"
 #import "UFProduct.h"
+#import "UFPostTableViewController.h"
 
 @interface UFMyPostingsTableViewController (){
     NSMutableArray* resultsArray;
@@ -40,10 +41,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    [self loadPostings];
 }
 
 - (void) viewDidAppear:(BOOL)animated{
-    [self loadPostings];
 }
 
 - (void)loadPostings{
@@ -78,14 +79,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return resultsArray.count;
 }
@@ -99,6 +98,14 @@
     UFProduct* product = resultsArray[indexPath.row];
     cell.textLabel.text = product.productType;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Price: $%d Quantity:%d",product.price.intValue,product.quantity.intValue];
+    cell.imageView.image = product.image;
+    
+    if(!product.image){
+        NSLog(@"Loading image..");
+        [product loadProductImageWithCompletionBlock:^{
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }];
+    }
     
     return cell;
 }
@@ -162,5 +169,18 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+
+#pragma mark - Segue Methods
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"UpdateProduct"]){
+        UFPostTableViewController* vc = segue.destinationViewController;
+        NSIndexPath* index = [self.tableView indexPathForSelectedRow];
+        vc.productToUpdate = resultsArray[index.row];
+        NSLog(@"Product Name: %@",vc.productToUpdate.productType);
+    }
+}
+
 
 @end

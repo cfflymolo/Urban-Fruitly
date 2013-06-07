@@ -50,6 +50,7 @@
     useGPS = NO;
     descriptionKeyboardVisible = NO;
     myGeoLocation = nil;
+    self.productToUpdate = nil;
     
     originalPickerFrame = CGRectMake(0, UIScreen.mainScreen.bounds.size.height, UIScreen.mainScreen.bounds.size.width ,TYPE_PICKERVIEW_HEIGHT);
     

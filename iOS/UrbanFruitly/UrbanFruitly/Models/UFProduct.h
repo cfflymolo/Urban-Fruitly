@@ -22,6 +22,7 @@
 - (id)initWithProductyType:(NSString *)productType price:(NSNumber *)price quantity:(NSNumber*)quantity expirationDate:(NSDate *)expirationDate andDescription:(NSString *)description;
 
 - (id)initWithPFObject:(PFObject*)obj;
+- (void) loadProductImageWithCompletionBlock:(void(^)(void))block;
 
 
 @end

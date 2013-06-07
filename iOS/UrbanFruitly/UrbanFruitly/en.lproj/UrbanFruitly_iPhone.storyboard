@@ -262,7 +262,7 @@
             <objects>
                 <tableViewController id="KMf-BF-J2z" customClass="UFProductSelectionTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Rxo-uZ-SeA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -876,47 +876,47 @@
             </objects>
             <point key="canvasLocation" x="275" y="-245"/>
         </scene>
-        <!--Product Detail View Controller - Type-->
+        <!--Product Detail View Controller-->
         <scene sceneID="jzH-LO-PiM">
             <objects>
                 <viewController storyboardIdentifier="ProductDetails" id="1At-Fm-5Pn" customClass="UFProductDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B3P-pm-s24">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="vMr-gJ-75C">
-                                <rect key="frame" x="10" y="10" width="300" height="196"/>
+                                <rect key="frame" x="10" y="13" width="300" height="196"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pLf-L2-yyy">
-                                <rect key="frame" x="20" y="255" width="220" height="40"/>
+                                <rect key="frame" x="20" y="312" width="220" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="$5.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PCP-Wq-nla">
-                                <rect key="frame" x="248" y="255" width="52" height="40"/>
+                                <rect key="frame" x="248" y="312" width="52" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vlp-Mu-W33">
-                                <rect key="frame" x="248" y="303" width="52" height="25"/>
+                                <rect key="frame" x="248" y="368" width="52" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Vendor Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TRn-ve-cdB">
-                                <rect key="frame" x="20" y="303" width="220" height="25"/>
+                                <rect key="frame" x="20" y="368" width="220" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="AYx-2O-7Os">
-                                <rect key="frame" x="20" y="336" width="280" height="2"/>
+                                <rect key="frame" x="20" y="405" width="280" height="2"/>
                                 <color key="backgroundColor" red="0.86666673421859741" green="0.86666673421859741" blue="0.85882359743118286" alpha="1" colorSpace="deviceRGB"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="acv-Hm-lpg">
-                                <rect key="frame" x="20" y="362" width="280" height="59"/>
+                                <rect key="frame" x="20" y="447" width="280" height="59"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -925,7 +925,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Type" id="gjE-es-XKJ">
+                    <navigationItem key="navigationItem" id="gjE-es-XKJ">
                         <barButtonItem key="rightBarButtonItem" title="Contact" id="ulC-ud-fps"/>
                     </navigationItem>
                     <connections>
@@ -1065,7 +1065,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostingListCell" textLabel="P8y-MN-r4b" detailTextLabel="D5Y-hV-nnH" imageView="6FI-LJ-evf" style="IBUITableViewCellStyleSubtitle" id="g6C-ta-Pwp">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostingListCell" textLabel="P8y-MN-r4b" detailTextLabel="D5Y-hV-nnH" style="IBUITableViewCellStyleSubtitle" id="g6C-ta-Pwp">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1073,28 +1073,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P8y-MN-r4b">
-                                            <rect key="frame" x="67" y="2" width="38" height="22"/>
+                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D5Y-hV-nnH">
-                                            <rect key="frame" x="67" y="24" width="36" height="18"/>
+                                            <rect key="frame" x="10" y="24" width="36" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="apple_002.jpg" id="6FI-LJ-evf">
-                                            <rect key="frame" x="0.0" y="0.0" width="57" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="1At-Fm-5Pn" kind="push" trigger="accessoryAction" id="2Xi-ux-57e"/>
+                                    <segue destination="4xI-PG-0mi" kind="push" identifier="UpdateProduct" trigger="accessoryAction" id="SFN-M5-c38"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1106,7 +1102,7 @@
                     <navigationItem key="navigationItem" title="My Postings" id="sw7-K2-Ode">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kus-C6-U1H">
                             <connections>
-                                <segue destination="4xI-PG-0mi" kind="push" id="CHY-oc-Ybs"/>
+                                <segue destination="4xI-PG-0mi" kind="push" identifier="NewProduct" id="CHY-oc-Ybs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1236,77 +1232,14 @@
         <image name="06-magnify.png" width="24" height="24"/>
         <image name="123-id-card.png" width="24" height="17"/>
         <image name="259-list.png" width="20" height="14"/>
-        <image name="apple_002.jpg" width="1600" height="1200"/>
     </resources>
-    <classes>
-        <class className="UFAccountRequiredTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFAccountRequiredTableViewController.h"/>
-        </class>
-        <class className="UFMainViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMainViewController.h"/>
-        </class>
-        <class className="UFMyPostingsTableViewController" superclassName="UFAccountRequiredTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFMyPostingsTableViewController.h"/>
-        </class>
-        <class className="UFPostTableViewController" superclassName="UFAccountRequiredTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFPostTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="gpsLocationButtonTapped:"/>
-                <relationship kind="action" name="postData:"/>
-                <relationship kind="action" name="selectPhotoButtonTapped:"/>
-                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="expirationTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gpsLocationButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="postButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="productImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="productTypeTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="quantityTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="selectPhotoButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="UFProductDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="quantityLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="vendorNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UFProductMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductMapViewController.h"/>
-        </class>
-        <class className="UFProductSelectionTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFProductSelectionTableViewController.h"/>
-        </class>
-        <class className="UFSearchTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSearchTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signOut:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="distField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="typeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UFSignupRequestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UFSignupRequestViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="login:"/>
-                <relationship kind="action" name="signup:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LHk-le-zbN"/>
+        <segue reference="CHY-oc-Ybs"/>
+        <segue reference="Ri5-7z-R4I"/>
     </inferredMetricsTieBreakers>
 </document>
